@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">CSC425-Project</string>
+    <string name="headerTextView">Flint Water Info</string>
+    <string name="volunteerButton">Volunteer</string>
+    <string name="donateButton">Donate</string>
+    <string name="resourceButton">Get Resources</string>
 </resources>

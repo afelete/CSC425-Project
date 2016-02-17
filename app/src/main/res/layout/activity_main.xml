@@ -10,32 +10,49 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.team1.csc425_project.MainActivity">
 
-    <Button
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/headerTextView"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/resourceButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="94dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/mybutton"
+        android:text="@string/resourceButton" />
+
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button2"
-        android:layout_below="@+id/button"
-        android:layout_alignLeft="@+id/button"
-        android:layout_alignStart="@+id/button"
-        android:layout_marginTop="47dp" />
+        android:text="@string/donateButton"
+        android:id="@+id/donateButton"
+        android:layout_below="@+id/resourceButton"
+        android:layout_alignLeft="@+id/resourceButton"
+        android:layout_alignStart="@+id/resourceButton"
+        android:layout_marginTop="47dp"
+        android:background="@drawable/mybutton"/>
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button3"
-        android:layout_below="@+id/button2"
-        android:layout_alignLeft="@+id/button2"
-        android:layout_alignStart="@+id/button2"
-        android:layout_marginTop="58dp" />
+        android:text="@string/volunteerButton"
+        android:id="@+id/volunteerButton"
+        android:layout_below="@+id/donateButton"
+        android:layout_alignLeft="@+id/donateButton"
+        android:layout_alignStart="@+id/donateButton"
+        android:layout_marginTop="47dp"
+        android:background="@drawable/mybutton"/>
+
 </RelativeLayout>
