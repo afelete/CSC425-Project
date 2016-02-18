@@ -4,4 +4,7 @@
     <string name="volunteerButton">Volunteer</string>
     <string name="donateButton">Donate</string>
     <string name="resourceButton">Get Resources</string>
+    <string name="GetResources">Get Resources</string>
+    <string name="Donate">Donate</string>
+    <string name="Volunteer">Volunteer</string>
 </resources>

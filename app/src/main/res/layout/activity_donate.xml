@@ -10,4 +10,15 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.team1.csc425_project.Donate">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/Donate"
+        android:id="@+id/textView3"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="40sp"
+        android:gravity="center"
+        android:textStyle="bold" />
 </RelativeLayout>
