@@ -10,9 +10,17 @@
     <string name="DonatePageIntroText">
             If you would like to donate water to Flint, you can donate to the
             locations listed below.</string>
-    <string name="DonateLoc1Text">For donations of 100 or less cases of water
-            \n Please go to: \n 517 E. Fifth Ave \n Flint, MI 48503</string>
+    <string name="DonateLoc1Text">Donations of 100 or less cases of water
+            \n Please go to: \n Catholic Charities Center for Hope \n 517 E. Fifth Ave
+            \n Flint, MI 48503 \n Monday-Friday 9am-4pm</string>
     <string name="DonateMapButton1">MAP</string>
+    <string name="DonateLoc2Text">Red Cross \n 1401 Grand Traverse \n Flint, MI 48503
+            \n Saturday-Sunday 9am-4pm</string>
+    <string name="DonateMapButton2">MAP</string>
+    <string name="DonateLoc3Text">Donations greater than 100 cases
+            \n Please go to: \n Food Bank of Eastern Michigan \n 2300 Lapeer Rd
+            \n Flint, MI 48503 \n Monday-Friday 8am-4:30pm</string>
+    <string name="DonateMapButton3">MAP</string>
 
 
 </resources>
