@@ -7,4 +7,12 @@
     <string name="GetResources">Get Resources</string>
     <string name="Donate">Donate</string>
     <string name="Volunteer">Volunteer</string>
+    <string name="DonatePageIntroText">
+            If you would like to donate water to Flint, you can donate to the
+            locations listed below.</string>
+    <string name="DonateLoc1Text">For donations of 100 or less cases of water
+            \n Please go to: \n 517 E. Fifth Ave \n Flint, MI 48503</string>
+    <string name="DonateMapButton1">MAP</string>
+
+
 </resources>
