@@ -64,6 +64,7 @@
             android:layout_alignBottom="@+id/donateLoc1Text"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
+            android:onClick="process"
             android:clickable="false" />
 
         <TextView
@@ -86,7 +87,8 @@
             android:id="@+id/donateMapButton2"
             android:layout_alignBottom="@+id/donateLoc2Text"
             android:layout_alignLeft="@+id/donateMapButton1"
-            android:layout_alignStart="@+id/donateMapButton1" />
+            android:layout_alignStart="@+id/donateMapButton1"
+            android:onClick="process"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -108,7 +110,8 @@
             android:id="@+id/donateMapButton3"
             android:layout_alignBottom="@+id/donateLoc3Text"
             android:layout_alignLeft="@+id/donateMapButton2"
-            android:layout_alignStart="@+id/donateMapButton2" />
+            android:layout_alignStart="@+id/donateMapButton2"
+            android:onClick="process"/>
 
         <TextView
             android:layout_width="wrap_content"
