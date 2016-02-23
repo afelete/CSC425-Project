@@ -15,99 +15,141 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         tools:context="com.team1.csc425_project.Donate">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/Donate"
-        android:id="@+id/donateHeader"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:textSize="40sp"
-        android:gravity="center"
-        android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/Donate"
+            android:id="@+id/donateHeader"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="40sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="#ffffff" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/DonatePageIntroText"
-        android:id="@+id/donatePageIntroText"
-        android:layout_below="@+id/donateHeader"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="36dp"
-        android:textStyle="bold"
-        android:textColor="#000000" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/DonatePageIntroText"
+            android:id="@+id/donatePageIntroText"
+            android:layout_marginTop="37dp"
+            android:textStyle="bold|normal"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/donateHeader"
+            android:layout_centerHorizontal="true"
+            android:textSize="25sp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/DonateLoc1Text"
-        android:id="@+id/donateLoc1Text"
-        android:layout_below="@+id/donatePageIntroText"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="33dp"
-        android:textStyle="bold"
-        android:textColor="#000000" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/DonateLoc1Text"
+            android:id="@+id/donateLoc1Text"
+            android:layout_below="@+id/donatePageIntroText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="33dp"
+            android:textStyle="bold"
+            android:textColor="#ffffff" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/DonateMapButton1"
-        android:id="@+id/donateMapButton1"
-        android:layout_alignBottom="@+id/donateLoc1Text"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/DonateMapButton1"
+            android:id="@+id/donateMapButton1"
+            android:layout_alignBottom="@+id/donateLoc1Text"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:clickable="false" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/DonateLoc2Text"
-        android:id="@+id/donateLoc2Text"
-        android:layout_marginTop="33dp"
-        android:textStyle="bold"
-        android:textColor="#000000"
-        android:layout_below="@+id/donateLoc1Text"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/DonateLoc2Text"
+            android:id="@+id/donateLoc2Text"
+            android:layout_marginTop="33dp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/donateLoc1Text"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/DonateMapButton2"
-        android:id="@+id/donateMapButton2"
-        android:layout_alignBottom="@+id/donateLoc2Text"
-        android:layout_alignLeft="@+id/donateMapButton1"
-        android:layout_alignStart="@+id/donateMapButton1" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/DonateMapButton2"
+            android:id="@+id/donateMapButton2"
+            android:layout_alignBottom="@+id/donateLoc2Text"
+            android:layout_alignLeft="@+id/donateMapButton1"
+            android:layout_alignStart="@+id/donateMapButton1" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/DonateLoc3Text"
-        android:id="@+id/donateLoc3Text"
-        android:layout_below="@+id/donateLoc2Text"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="33dp"
-        android:textStyle="bold"
-        android:textColor="#000000" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/DonateLoc3Text"
+            android:id="@+id/donateLoc3Text"
+            android:layout_below="@+id/donateLoc2Text"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="33dp"
+            android:textStyle="bold"
+            android:textColor="#ffffff" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/DonateMapButton3"
-        android:id="@+id/donateMapButton3"
-        android:layout_alignBottom="@+id/donateLoc3Text"
-        android:layout_alignLeft="@+id/donateMapButton2"
-        android:layout_alignStart="@+id/donateMapButton2" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/DonateMapButton3"
+            android:id="@+id/donateMapButton3"
+            android:layout_alignBottom="@+id/donateLoc3Text"
+            android:layout_alignLeft="@+id/donateMapButton2"
+            android:layout_alignStart="@+id/donateMapButton2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/FinancialDonationsText"
+            android:id="@+id/financialDonationsText"
+            android:layout_marginTop="37dp"
+            android:textStyle="bold|normal"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/donateLoc3Text"
+            android:layout_centerHorizontal="true"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/DonateFinancialAddress"
+            android:id="@+id/donateFinancialAddress"
+            android:layout_below="@+id/financialDonationsText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="33dp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:autoLink="web" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/DonateFinancialPhone"
+            android:id="@+id/donateFinancialPhone"
+            android:layout_below="@+id/donateFinancialAddress"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="33dp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:autoLink="web" />
 
 
     </RelativeLayout>

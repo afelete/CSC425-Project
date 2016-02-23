@@ -20,5 +20,6 @@
         android:layout_centerHorizontal="true"
         android:textSize="40sp"
         android:textStyle="bold"
-        android:gravity="center" />
+        android:gravity="center"
+        android:textColor="#ffffff" />
 </RelativeLayout>
