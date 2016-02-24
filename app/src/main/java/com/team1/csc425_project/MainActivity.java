@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         donateButton.setOnClickListener(this);
         Button volunteerButton = (Button) findViewById(R.id.volunteerButton);
         volunteerButton.setOnClickListener(this);
+        Button newsButton = (Button) findViewById(R.id.newsButton);
+        newsButton.setOnClickListener(this);
     }
 
     public void onClick(View v) {
@@ -33,6 +35,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         } else if (v.getId() == R.id.volunteerButton) {
             Intent intent = new Intent(v.getContext(), Volunteer.class);
+            startActivity(intent);
+        }
+
+         else if (v.getId() == R.id.newsButton) {
+            Intent intent = new Intent(v.getContext(), News.class);
             startActivity(intent);
         }
 

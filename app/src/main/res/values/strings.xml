@@ -23,6 +23,7 @@
     <string name="FinancialDonationsText">Financial Donations</string>
     <string name="DonateFinancialAddress">www.FlintKids.org</string>
     <string name="DonateFinancialPhone">United Way 810-232-8121</string>
+    <string name="newsButton">News</string>
 
 
 </resources>
