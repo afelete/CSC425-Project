@@ -24,6 +24,8 @@
     <string name="DonateFinancialAddress">www.FlintKids.org</string>
     <string name="DonateFinancialPhone">United Way 810-232-8121</string>
     <string name="newsButton">News</string>
-
+    <string name="title_activity_news__read">News_Read</string>
+    <string name="news_button">read more</string>
+    <string name="title_activity_news_web">NewsWeb</string>
 
 </resources>

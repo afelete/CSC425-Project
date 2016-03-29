@@ -3,10 +3,435 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+
     tools:context="com.team1.csc425_project.News">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.CardView
+                android:layout_margin="@dimen/news_card_margin"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/news_card_height"
+                android:id="@+id/card1"
+                app:cardElevation="@dimen/news_card_elevation"
+                app:cardBackgroundColor="@color/news_card_background">
+
+                <FrameLayout
+                    android:paddingLeft="@dimen/news_card_frame_padding"
+                    android:paddingRight="@dimen/news_card_frame_padding"
+                    android:paddingTop="@dimen/news_card_frame_padding"
+                    android:paddingBottom="@dimen/news_card_frame_padding"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Title"
+                        android:textStyle="bold"
+                        android:id="@+id/title1" />
+                    <TextView
+                        android:layout_marginTop="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="content"
+                        android:id="@+id/content1" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/news_button"
+                        android:id="@+id/news_button1"
+                        android:layout_gravity="right|center_vertical" />
+
+
+                </FrameLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_margin="@dimen/news_card_margin"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/news_card_height"
+                android:id="@+id/card2"
+                app:cardElevation="@dimen/news_card_elevation"
+                app:cardBackgroundColor="@color/news_card_background">
+
+                <FrameLayout
+                    android:paddingLeft="@dimen/news_card_frame_padding"
+                    android:paddingRight="@dimen/news_card_frame_padding"
+                    android:paddingTop="@dimen/news_card_frame_padding"
+                    android:paddingBottom="@dimen/news_card_frame_padding"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Title"
+                        android:textStyle="bold"
+                        android:id="@+id/title2" />
+                    <TextView
+                        android:layout_marginTop="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="content"
+                        android:id="@+id/content2" />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/news_button"
+                        android:id="@+id/news_button2"
+                        android:layout_gravity="right|center_vertical" />
+
+
+                </FrameLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_margin="@dimen/news_card_margin"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/news_card_height"
+                android:id="@+id/card3"
+                app:cardElevation="@dimen/news_card_elevation"
+                app:cardBackgroundColor="@color/news_card_background">
+
+                <FrameLayout
+                    android:paddingLeft="@dimen/news_card_frame_padding"
+                    android:paddingRight="@dimen/news_card_frame_padding"
+                    android:paddingTop="@dimen/news_card_frame_padding"
+                    android:paddingBottom="@dimen/news_card_frame_padding"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Title"
+                        android:textStyle="bold"
+                        android:id="@+id/title3" />
+                    <TextView
+                        android:layout_marginTop="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="content"
+                        android:id="@+id/content3" />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/news_button"
+                        android:id="@+id/news_button3"
+                        android:layout_gravity="right|center_vertical" />
+
+
+                </FrameLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_margin="@dimen/news_card_margin"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/news_card_height"
+                android:id="@+id/card4"
+                app:cardElevation="@dimen/news_card_elevation"
+                app:cardBackgroundColor="@color/news_card_background">
+
+                <FrameLayout
+                    android:paddingLeft="@dimen/news_card_frame_padding"
+                    android:paddingRight="@dimen/news_card_frame_padding"
+                    android:paddingTop="@dimen/news_card_frame_padding"
+                    android:paddingBottom="@dimen/news_card_frame_padding"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Title"
+                        android:textStyle="bold"
+                        android:id="@+id/title4" />
+                    <TextView
+                        android:layout_marginTop="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="content"
+                        android:id="@+id/content4" />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/news_button"
+                        android:id="@+id/news_button4"
+                        android:layout_gravity="right|center_vertical" />
+
+
+                </FrameLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_margin="@dimen/news_card_margin"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/news_card_height"
+                android:id="@+id/card5"
+                app:cardElevation="@dimen/news_card_elevation"
+                app:cardBackgroundColor="@color/news_card_background">
+
+                <FrameLayout
+                    android:paddingLeft="@dimen/news_card_frame_padding"
+                    android:paddingRight="@dimen/news_card_frame_padding"
+                    android:paddingTop="@dimen/news_card_frame_padding"
+                    android:paddingBottom="@dimen/news_card_frame_padding"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Title"
+                        android:textStyle="bold"
+                        android:id="@+id/title5" />
+                    <TextView
+                        android:layout_marginTop="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="content"
+                        android:id="@+id/content5" />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/news_button"
+                        android:id="@+id/news_button5"
+                        android:layout_gravity="right|center_vertical" />
+
+
+                </FrameLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_margin="@dimen/news_card_margin"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/news_card_height"
+                android:id="@+id/card6"
+                app:cardElevation="@dimen/news_card_elevation"
+                app:cardBackgroundColor="@color/news_card_background">
+
+                <FrameLayout
+                    android:paddingLeft="@dimen/news_card_frame_padding"
+                    android:paddingRight="@dimen/news_card_frame_padding"
+                    android:paddingTop="@dimen/news_card_frame_padding"
+                    android:paddingBottom="@dimen/news_card_frame_padding"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Title"
+                        android:textStyle="bold"
+                        android:id="@+id/title6" />
+                    <TextView
+                        android:layout_marginTop="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="content"
+                        android:id="@+id/content6" />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/news_button"
+                        android:id="@+id/news_button6"
+                        android:layout_gravity="right|center_vertical" />
+
+
+                </FrameLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_margin="@dimen/news_card_margin"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/news_card_height"
+                android:id="@+id/card7"
+                app:cardElevation="@dimen/news_card_elevation"
+                app:cardBackgroundColor="@color/news_card_background">
+
+                <FrameLayout
+                    android:paddingLeft="@dimen/news_card_frame_padding"
+                    android:paddingRight="@dimen/news_card_frame_padding"
+                    android:paddingTop="@dimen/news_card_frame_padding"
+                    android:paddingBottom="@dimen/news_card_frame_padding"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Title"
+                        android:textStyle="bold"
+                        android:id="@+id/title7" />
+                    <TextView
+                        android:layout_marginTop="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="content"
+                        android:id="@+id/content7" />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/news_button"
+                        android:id="@+id/news_button7"
+                        android:layout_gravity="right|center_vertical" />
+
+
+                </FrameLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_margin="@dimen/news_card_margin"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/news_card_height"
+                android:id="@+id/card8"
+                app:cardElevation="@dimen/news_card_elevation"
+                app:cardBackgroundColor="@color/news_card_background">
+
+                <FrameLayout
+                    android:paddingLeft="@dimen/news_card_frame_padding"
+                    android:paddingRight="@dimen/news_card_frame_padding"
+                    android:paddingTop="@dimen/news_card_frame_padding"
+                    android:paddingBottom="@dimen/news_card_frame_padding"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Title"
+                        android:textStyle="bold"
+                        android:id="@+id/title8" />
+                    <TextView
+                        android:layout_marginTop="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="content"
+                        android:id="@+id/content8" />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/news_button"
+                        android:id="@+id/news_button8"
+                        android:layout_gravity="right|center_vertical" />
+
+
+                </FrameLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_margin="@dimen/news_card_margin"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/news_card_height"
+                android:id="@+id/card9"
+                app:cardElevation="@dimen/news_card_elevation"
+                app:cardBackgroundColor="@color/news_card_background">
+
+                <FrameLayout
+                    android:paddingLeft="@dimen/news_card_frame_padding"
+                    android:paddingRight="@dimen/news_card_frame_padding"
+                    android:paddingTop="@dimen/news_card_frame_padding"
+                    android:paddingBottom="@dimen/news_card_frame_padding"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Title"
+                        android:textStyle="bold"
+                        android:id="@+id/title9" />
+                    <TextView
+                        android:layout_marginTop="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="content"
+                        android:id="@+id/content9" />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/news_button"
+                        android:id="@+id/news_button9"
+                        android:layout_gravity="right|center_vertical" />
+
+
+                </FrameLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_margin="@dimen/news_card_margin"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/news_card_height"
+                android:id="@+id/card10"
+                app:cardElevation="@dimen/news_card_elevation"
+                app:cardBackgroundColor="@color/news_card_background">
+
+                <FrameLayout
+                    android:paddingLeft="@dimen/news_card_frame_padding"
+                    android:paddingRight="@dimen/news_card_frame_padding"
+                    android:paddingTop="@dimen/news_card_frame_padding"
+                    android:paddingBottom="@dimen/news_card_frame_padding"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Title"
+                        android:textStyle="bold"
+                        android:id="@+id/title10" />
+                    <TextView
+                        android:layout_marginTop="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="content"
+                        android:id="@+id/content10" />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/news_button"
+                        android:id="@+id/news_button10"
+                        android:layout_gravity="right|center_vertical" />
+
+
+                </FrameLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>
