@@ -27,5 +27,15 @@
     <string name="title_activity_news__read">News_Read</string>
     <string name="news_button">read more</string>
     <string name="title_activity_news_web">NewsWeb</string>
+    <string name="volunteerTitle">Volunteering</string>
+    <string name="volunteerName">Name:</string>
+    <string name="volunteerBirthdate">Birthdate:</string>
+    <string name="volunteerAddress">Address:</string>
+    <string name="volunteerCity">City:</string>
+    <string name="volunteerState">State:</string>
+    <string name="volunteerZipCode">Zip Code:</string>
+    <string name="volunteerReset">RESET</string>
+    <string name="volunteerSubmit">SUBMIT</string>
+
 
 </resources>

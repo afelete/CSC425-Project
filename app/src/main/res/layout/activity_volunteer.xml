@@ -15,11 +15,175 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/Volunteer"
-        android:id="@+id/textView4"
+        android:id="@+id/titleTextView"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:textSize="40sp"
         android:textStyle="bold"
         android:gravity="center"
         android:textColor="#ffffff" />
+
+    <GridLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentRight="false"
+        android:layout_below="@+id/titleTextView"
+        android:columnCount="2"
+        android:useDefaultMargins="true"
+        android:rowCount="3"
+        android:id="@+id/GridLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/volunteerName"
+            android:id="@+id/nameTextView"
+            android:textColor="#ffffff" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/nameEditText"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/volunteerBirthdate"
+            android:id="@+id/birthdateTextView"
+            android:textColor="#ffffff" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/birthdateEditText"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:inputType="date"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/volunteerAddress"
+            android:id="@+id/addressTextView"
+            android:textColor="#ffffff" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPostalAddress"
+            android:ems="10"
+            android:id="@+id/addressEditText"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:textColor="#ffffff" />
+
+    </GridLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/GridLayout"
+        android:id="@+id/subRelativeLayout">
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="City:"
+            android:id="@+id/cityTextView"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="8dp"
+            android:textColor="#ffffff" />
+
+        <EditText
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/cityEditText"
+            android:layout_toEndOf="@id/cityTextView"
+            android:layout_toRightOf="@id/cityTextView"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/volunteerState"
+            android:id="@+id/stateTextView"
+            android:layout_toEndOf="@id/cityEditText"
+            android:layout_toRightOf="@+id/cityEditText"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:textColor="#ffffff" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/stateEditText"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/stateTextView"
+            android:layout_toRightOf="@+id/stateTextView"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/volunteerZipCode"
+            android:id="@+id/zipTextView"
+            android:layout_below="@+id/cityEditText"
+            android:layout_marginTop="8dp"
+            android:layout_alignParentLeft="false"
+            android:textColor="#ffffff" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/zipEditText"
+            android:layout_below="@+id/cityEditText"
+            android:layout_toEndOf="@+id/zipTextView"
+            android:layout_toRightOf="@+id/zipTextView"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/volunteerReset"
+            android:id="@+id/resetButton"
+            android:layout_alignTop="@+id/submitButton"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentLeft="false"
+            android:layout_toEndOf="@id/zipTextView"
+            android:layout_toRightOf="@+id/zipTextView"
+            android:layout_marginLeft="8dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/volunteerSubmit"
+            android:id="@+id/submitButton"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="35dp"
+            android:layout_toEndOf="@id/resetButton"
+            android:layout_toRightOf="@+id/resetButton"
+            android:layout_marginLeft="30dp" />
+
+    </RelativeLayout>
+
 </RelativeLayout>
