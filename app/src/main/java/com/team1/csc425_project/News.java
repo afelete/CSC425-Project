@@ -68,10 +68,42 @@ public class News extends AppCompatActivity implements View.OnClickListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);
-        //open news article on tap
-      Button news1 = (Button) findViewById(R.id.news_button1);
-        news1.setOnClickListener(this);
 
+        //set news preview cards to be clickable
+        CardView card1 = (CardView)findViewById(R.id.card1);
+        card1.setOnClickListener(this);
+
+        CardView card2 = (CardView)findViewById(R.id.card2);
+        card2.setOnClickListener(this);
+
+        CardView card3 = (CardView)findViewById(R.id.card3);
+        card3.setOnClickListener(this);
+
+        CardView card4 = (CardView)findViewById(R.id.card4);
+        card4.setOnClickListener(this);
+
+        CardView card5 = (CardView)findViewById(R.id.card5);
+        card5.setOnClickListener(this);
+
+        CardView card6 = (CardView)findViewById(R.id.card6);
+        card6.setOnClickListener(this);
+
+        CardView card7 = (CardView)findViewById(R.id.card7);
+        card7.setOnClickListener(this);
+
+        CardView card8 = (CardView)findViewById(R.id.card8);
+        card8.setOnClickListener(this);
+
+        CardView card9 = (CardView)findViewById(R.id.card9);
+        card9.setOnClickListener(this);
+
+        CardView card10 = (CardView)findViewById(R.id.card10);
+        card10.setOnClickListener(this);
+
+        /*
+        //sets buttons to be clickable
+        Button news1 = (Button) findViewById(R.id.news_button1);
+        news1.setOnClickListener(this);
 
         Button news2 = (Button) findViewById(R.id.news_button2);
         news2.setOnClickListener(this);
@@ -99,7 +131,7 @@ public class News extends AppCompatActivity implements View.OnClickListener{
 
         Button news10 = (Button) findViewById(R.id.news_button10);
         news10.setOnClickListener(this);
-
+        */
         //connect to webserver
 
         /*
@@ -221,7 +253,7 @@ public class News extends AppCompatActivity implements View.OnClickListener{
         //SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
         //SharedPreferences.Editor editor = sharedPref.edit();
         //Integer button=null;
-        if (v.getId() == R.id.news_button1) {
+        if (v.getId() == R.id.card1) {
             Intent intent = new Intent(v.getContext(), NewsRead.class);
 
             newsBundle.putInt("buttonNum", 1);
@@ -229,63 +261,63 @@ public class News extends AppCompatActivity implements View.OnClickListener{
             startActivity(intent);
 
         }
-        if (v.getId() == R.id.news_button2) {
+        if (v.getId() == R.id.card2) {
             Intent intent = new Intent(v.getContext(), NewsRead.class);
             newsBundle.putInt("buttonNum", 2);
             intent.putExtras(newsBundle);
             startActivity(intent);
 
         }
-        if (v.getId() == R.id.news_button3) {
+        if (v.getId() == R.id.card3) {
             Intent intent = new Intent(v.getContext(), NewsRead.class);
             newsBundle.putInt("buttonNum", 3);
             intent.putExtras(newsBundle);
             startActivity(intent);
 
         }
-        if (v.getId() == R.id.news_button4) {
+        if (v.getId() == R.id.card4) {
             Intent intent = new Intent(v.getContext(), NewsRead.class);
             newsBundle.putInt("buttonNum", 4);
             intent.putExtras(newsBundle);
             startActivity(intent);
 
         }
-        if (v.getId() == R.id.news_button5) {
+        if (v.getId() == R.id.card5) {
             Intent intent = new Intent(v.getContext(), NewsRead.class);
             newsBundle.putInt("buttonNum", 5);
             intent.putExtras(newsBundle);
             startActivity(intent);
 
         }
-        if (v.getId() == R.id.news_button6) {
+        if (v.getId() == R.id.card6) {
             Intent intent = new Intent(v.getContext(), NewsRead.class);
             newsBundle.putInt("buttonNum", 6);
             intent.putExtras(newsBundle);
             startActivity(intent);
 
         }
-        if (v.getId() == R.id.news_button7) {
+        if (v.getId() == R.id.card7) {
             Intent intent = new Intent(v.getContext(), NewsRead.class);
             newsBundle.putInt("buttonNum", 7);
             intent.putExtras(newsBundle);
             startActivity(intent);
 
         }
-        if (v.getId() == R.id.news_button8) {
+        if (v.getId() == R.id.card8) {
             Intent intent = new Intent(v.getContext(), NewsRead.class);
             newsBundle.putInt("buttonNum", 8);
             intent.putExtras(newsBundle);
             startActivity(intent);
 
         }
-        if (v.getId() == R.id.news_button9) {
+        if (v.getId() == R.id.card9) {
             Intent intent = new Intent(v.getContext(), NewsRead.class);
             newsBundle.putInt("buttonNum", 9);
             intent.putExtras(newsBundle);
             startActivity(intent);
 
         }
-        if (v.getId() == R.id.news_button10) {
+        if (v.getId() == R.id.card10) {
             Intent intent = new Intent(v.getContext(), NewsRead.class);
             newsBundle.putInt("buttonNum", 10);
             intent.putExtras(newsBundle);
