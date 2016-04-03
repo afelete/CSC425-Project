@@ -2,10 +2,12 @@ package com.team1.csc425_project;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -14,25 +16,38 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 import android.support.v7.widget.CardView;
+import android.widget.Toast;
+
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
 
+import org.apache.http.conn.ConnectTimeoutException;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import org.w3c.dom.Text;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.SocketTimeoutException;
+import java.net.URL;
+import java.net.URLConnection;
+import java.util.logging.Handler;
+import java.util.logging.LogRecord;
 
 public class News extends AppCompatActivity implements View.OnClickListener{
 
-
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
-    private GoogleApiClient client;
+     private GoogleApiClient client;
     private CardView c;
     private View v;
 
-    String articleURL1 = "http://www.google.com";
+    String articleURL1 = "http://www.painfullreset.us/fetch.php";
     String articleURL2 = "http://www.yahoo.com";
     String articleURL3 = "http://www.bing.com";
     String articleURL4 = "http://www.google.com";
@@ -42,6 +57,10 @@ public class News extends AppCompatActivity implements View.OnClickListener{
     String articleURL8 = "http://www.google.com";
     String articleURL9 = "http://www.google.com";
     String articleURL10 = "http://www.google.com";
+
+   // String globalTitle = "notitle";
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,8 +98,109 @@ public class News extends AppCompatActivity implements View.OnClickListener{
         Button news10 = (Button) findViewById(R.id.news_button10);
         news10.setOnClickListener(this);
 
+        //connect to webserver
+
+        /*
+        Thread netThread = new Thread(new Runnable(){
+            @Override
+            public void run() {
+                try {
+                    try {
+                        URL url1 = new URL("http://painfullreset.us/fetch.php");
+                        String content = "fail";//create and initialize, fail meaning either the request hasn't been made yet
+                                                //or it was unsucsesful.
+                        boolean fiveFail = false;//if the conection fails more than 5 times set this to true
+                        int numAttempts = 0;
+                        loop: while (fiveFail != true){
+                            Log.d("json","printing the contents of 'content'(in loop)");
+                            Log.d("json",content);
+
+                            content = connect(url1);//fetch content from server
+                            if (content == "fail"){
+                                numAttempts = numAttempts+1;
+                            }
+                            if(content == "error"){
+                                Log.d("connection","unkown error");
+                                break loop;
+                            }
+                            if (numAttempts>5){
+                                fiveFail = true;
+                            }
+                            if(content!="fail"){
+                                Log.d("connection","connection to server sucsess");
+                                break loop;
+                            }
+                        }
+                        //section dedicated to processing result from server
+                        //results are stored in a json object, from which info can be extracted.
+
+                        Log.d("json","connection complete, entering data processing stage");
+                        Log.d("json","printing the contents of 'content'");
+                        Log.d("json",content);
+
+                        String title="no title";
+
+                        JSONArray jArray = new JSONArray(content);
+
+                        JSONObject jobject = jArray.getJSONObject(0);
+                        title = jobject.getString("title");
+
+                        //globalTitle=title;
+
+                        Log.d("json","title is");
+                        Log.d("json",title);
 
 
+
+                        //display information
+                        /*
+                        TextView contentPreview1 = new TextView(getApplicationContext());
+                        contentPreview1=(TextView)findViewById(R.id.content1);
+                        contentPreview1.setText("test");
+                        contentPreview1.invalidate();
+                        */
+                        /*can't do this from this thread i think
+                        TextView title1 = new TextView(getApplicationContext());
+                        title1=(TextView)findViewById(R.id.title1);
+                        title1.setText(title);
+                        title1.invalidate();
+                        */
+
+                        //contentPreview1.setText(title);
+
+                        //articleURL1 = content;
+                        //Toast t = Toast.makeText(getApplicationContext(),recieveText.optString("title"),Toast.LENGTH_SHORT);
+                        //t.show();
+
+        /*
+                    } catch (MalformedURLException e) {
+                        e.printStackTrace();
+                    } catch (IOException e) {
+                        Log.d("connection","connection problem");
+
+                        e.printStackTrace();
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });*/
+
+        //netThread.start();
+
+        //setup crap while network thread is doing work
+        TextView title1 = new TextView(getApplicationContext());
+        title1=(TextView)findViewById(R.id.title1);
+
+        URL url1 = null;
+        try {
+            url1 = new URL("http://painfullreset.us/fetch.php");
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+
+        DownloadFilesTask update = new DownloadFilesTask(this);
+        update.execute(url1);
 
 
     }
@@ -184,5 +304,7 @@ public class News extends AppCompatActivity implements View.OnClickListener{
 
         }
     }
+
+
 
 }
