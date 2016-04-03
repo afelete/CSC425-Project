@@ -224,89 +224,68 @@ public class News extends AppCompatActivity implements View.OnClickListener{
 
             newsBundle.putInt("buttonNum", 1);
             intent.putExtras(newsBundle);
-           // editor.putInt("buttonPressed", 1);
-            //editor.commit();
-            //button=0;
             startActivity(intent);
 
         }
         if (v.getId() == R.id.news_button2) {
-            Intent intent = new Intent(v.getContext(), NewsWeb.class);
-            startActivity(intent);
-
-            newsBundle.putString("urlString", articleURL2);
+            Intent intent = new Intent(v.getContext(), NewsRead.class);
+            newsBundle.putInt("buttonNum", 2);
             intent.putExtras(newsBundle);
             startActivity(intent);
 
         }
         if (v.getId() == R.id.news_button3) {
-            Intent intent = new Intent(v.getContext(), NewsWeb.class);
-            startActivity(intent);
-
-            newsBundle.putString("urlString", articleURL3);
+            Intent intent = new Intent(v.getContext(), NewsRead.class);
+            newsBundle.putInt("buttonNum", 3);
             intent.putExtras(newsBundle);
             startActivity(intent);
 
         }
         if (v.getId() == R.id.news_button4) {
-            Intent intent = new Intent(v.getContext(), NewsWeb.class);
-            startActivity(intent);
-
-            newsBundle.putString("urlString", articleURL1);
+            Intent intent = new Intent(v.getContext(), NewsRead.class);
+            newsBundle.putInt("buttonNum", 4);
             intent.putExtras(newsBundle);
             startActivity(intent);
 
         }
         if (v.getId() == R.id.news_button5) {
-            Intent intent = new Intent(v.getContext(), NewsWeb.class);
-            startActivity(intent);
-
-            newsBundle.putString("urlString", articleURL1);
+            Intent intent = new Intent(v.getContext(), NewsRead.class);
+            newsBundle.putInt("buttonNum", 5);
             intent.putExtras(newsBundle);
             startActivity(intent);
 
         }
         if (v.getId() == R.id.news_button6) {
-            Intent intent = new Intent(v.getContext(), NewsWeb.class);
-            startActivity(intent);
-
-            newsBundle.putString("urlString", articleURL1);
+            Intent intent = new Intent(v.getContext(), NewsRead.class);
+            newsBundle.putInt("buttonNum", 6);
             intent.putExtras(newsBundle);
             startActivity(intent);
 
         }
         if (v.getId() == R.id.news_button7) {
-            Intent intent = new Intent(v.getContext(), NewsWeb.class);
-            startActivity(intent);
-
-            newsBundle.putString("urlString", articleURL1);
+            Intent intent = new Intent(v.getContext(), NewsRead.class);
+            newsBundle.putInt("buttonNum", 7);
             intent.putExtras(newsBundle);
             startActivity(intent);
 
         }
         if (v.getId() == R.id.news_button8) {
-            Intent intent = new Intent(v.getContext(), NewsWeb.class);
-            startActivity(intent);
-
-            newsBundle.putString("urlString", articleURL1);
+            Intent intent = new Intent(v.getContext(), NewsRead.class);
+            newsBundle.putInt("buttonNum", 8);
             intent.putExtras(newsBundle);
             startActivity(intent);
 
         }
         if (v.getId() == R.id.news_button9) {
-            Intent intent = new Intent(v.getContext(), NewsWeb.class);
-            startActivity(intent);
-
-            newsBundle.putString("urlString", articleURL1);
+            Intent intent = new Intent(v.getContext(), NewsRead.class);
+            newsBundle.putInt("buttonNum", 9);
             intent.putExtras(newsBundle);
             startActivity(intent);
 
         }
         if (v.getId() == R.id.news_button10) {
-            Intent intent = new Intent(v.getContext(), NewsWeb.class);
-            startActivity(intent);
-
-            newsBundle.putString("urlString", articleURL1);
+            Intent intent = new Intent(v.getContext(), NewsRead.class);
+            newsBundle.putInt("buttonNum", 10);
             intent.putExtras(newsBundle);
             startActivity(intent);
 

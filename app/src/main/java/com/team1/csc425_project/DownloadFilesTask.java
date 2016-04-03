@@ -86,7 +86,7 @@ public class DownloadFilesTask extends AsyncTask<Integer, Void, postWrap> {
 
     protected postWrap doInBackground(Integer... buttonNum) {
         Log.d("array","contents of buttonNum[0]");
-        Log.d("array",buttonNum[0].toString());
+        Log.d("array", buttonNum[0].toString());
         int buttonPrimitive= buttonNum[0].intValue();
 
 
@@ -412,13 +412,272 @@ public class DownloadFilesTask extends AsyncTask<Integer, Void, postWrap> {
             }
 
 
+                TextView newsReadBody1= new TextView(anotherActivity);
+                newsReadBody1 = (TextView)anotherActivity.findViewById(R.id.news_read_body);
+                newsReadBody1.setText(titleOneText);
+                newsReadBody1.invalidate();
+                Log.d("display","ui update for news read body");
+                break;
+            case 2:
+                try {
+                    jobject = data.getJSONObject(1);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    titleOneText = jobject.getString("article");
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+
+                TextView newsReadBody2= new TextView(anotherActivity);
+                newsReadBody2 = (TextView)anotherActivity.findViewById(R.id.news_read_body);
+                newsReadBody2.setText(titleOneText);
+                newsReadBody2.invalidate();
+                Log.d("display","ui update for news read body");
+                break;
+            case 3:
+                try {
+                    jobject = data.getJSONObject(2);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    titleOneText = jobject.getString("article");
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+
+                TextView newsReadBody3= new TextView(anotherActivity);
+                newsReadBody3 = (TextView)anotherActivity.findViewById(R.id.news_read_body);
+                newsReadBody3.setText(titleOneText);
+                newsReadBody3.invalidate();
+                Log.d("display","ui update for news read body");
+                break;
+            case 4:
+                try {
+                    jobject = data.getJSONObject(3);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    titleOneText = jobject.getString("article");
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+
+                TextView newsReadBody4= new TextView(anotherActivity);
+                newsReadBody4 = (TextView)anotherActivity.findViewById(R.id.news_read_body);
+                newsReadBody4.setText(titleOneText);
+                newsReadBody4.invalidate();
+                Log.d("display","ui update for news read body");
+                break;
+            case 5:
+                try {
+                    jobject = data.getJSONObject(4);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    titleOneText = jobject.getString("article");
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+
+                TextView newsReadBody5= new TextView(anotherActivity);
+                newsReadBody5 = (TextView)anotherActivity.findViewById(R.id.news_read_body);
+                newsReadBody5.setText(titleOneText);
+                newsReadBody5.invalidate();
+                Log.d("display","ui update for news read body");
+                break;
+            case 6:
+                try {
+                    jobject = data.getJSONObject(5);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    titleOneText = jobject.getString("article");
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+
+                TextView newsReadBody6= new TextView(anotherActivity);
+                newsReadBody6 = (TextView)anotherActivity.findViewById(R.id.news_read_body);
+                newsReadBody6.setText(titleOneText);
+                newsReadBody6.invalidate();
+                Log.d("display","ui update for news read body");
+                break;
+            case 7:
+                try {
+                    jobject = data.getJSONObject(6);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    titleOneText = jobject.getString("article");
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+
                 TextView newsReadBody= new TextView(anotherActivity);
                 newsReadBody = (TextView)anotherActivity.findViewById(R.id.news_read_body);
                 newsReadBody.setText(titleOneText);
                 newsReadBody.invalidate();
                 Log.d("display","ui update for news read body");
                 break;
+            case 8:
+                try {
+                    jobject = data.getJSONObject(7);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    titleOneText = jobject.getString("article");
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+
+                TextView newsReadBody7= new TextView(anotherActivity);
+                newsReadBody7 = (TextView)anotherActivity.findViewById(R.id.news_read_body);
+                newsReadBody7.setText(titleOneText);
+                newsReadBody7.invalidate();
+                Log.d("display","ui update for news read body");
+                break;
+            case 9:
+                try {
+                    jobject = data.getJSONObject(8);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    titleOneText = jobject.getString("article");
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+
+                TextView newsReadBody8= new TextView(anotherActivity);
+                newsReadBody8 = (TextView)anotherActivity.findViewById(R.id.news_read_body);
+                newsReadBody8.setText(titleOneText);
+                newsReadBody8.invalidate();
+                Log.d("display","ui update for news read body");
+                break;
+            case 10:
+                try {
+                    jobject = data.getJSONObject(9);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    titleOneText = jobject.getString("article");
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+
+                TextView newsReadBody9= new TextView(anotherActivity);
+                newsReadBody9 = (TextView)anotherActivity.findViewById(R.id.news_read_body);
+                newsReadBody9.setText(titleOneText);
+                newsReadBody9.invalidate();
+                Log.d("display","ui update for news read body");
+                break;
             }
-        }}}
+
+            try {
+                jobject = data.getJSONObject(buttonPressed-1);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            try {
+                titleOneText = jobject.getString("title");
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+            //load the title
+            switch (buttonPressed) {
+                case 0:
+                    TextView title1 = new TextView(anotherActivity);
+                    title1 = (TextView) anotherActivity.findViewById(R.id.news_read_title);
+                    title1.setText(titleOneText);
+                    title1.invalidate();
+                    Log.d("display", "ui updated for news read title");
+                    break;
+
+                case 1:
+                    TextView title2 = new TextView(anotherActivity);
+                    title2 = (TextView) anotherActivity.findViewById(R.id.news_read_title);
+                    title2.setText(titleOneText);
+                    title2.invalidate();
+                    Log.d("display", "ui updated for news read title");
+                    break;
+                case 2:
+                    TextView title3 = new TextView(anotherActivity);
+                    title3 = (TextView) anotherActivity.findViewById(R.id.news_read_title);
+                    title3.setText(titleOneText);
+                    title3.invalidate();
+                    Log.d("display", "ui updated for news read title");
+                    break;
+                case 3:
+                    TextView title4 = new TextView(anotherActivity);
+                    title4 = (TextView) anotherActivity.findViewById(R.id.news_read_title);
+                    title4.setText(titleOneText);
+                    title4.invalidate();
+                    Log.d("display", "ui updated for news read title");
+                    break;
+                case 4:
+                    TextView title5 = new TextView(anotherActivity);
+                    title5 = (TextView) anotherActivity.findViewById(R.id.news_read_title);
+                    title5.setText(titleOneText);
+                    title5.invalidate();
+                    Log.d("display", "ui updated for news read title");
+                    break;
+                case 5:
+                    TextView title6 = new TextView(anotherActivity);
+                    title6 = (TextView) anotherActivity.findViewById(R.id.news_read_title);
+                    title6.setText(titleOneText);
+                    title6.invalidate();
+                    Log.d("display", "ui updated for news read title");
+                    break;
+                case 6:
+                    TextView title7 = new TextView(anotherActivity);
+                    title7 = (TextView) anotherActivity.findViewById(R.id.news_read_title);
+                    title7.setText(titleOneText);
+                    title7.invalidate();
+                    Log.d("display", "ui updated for news read title");
+                    break;
+                case 7:
+                    TextView title8 = new TextView(anotherActivity);
+                    title8 = (TextView) anotherActivity.findViewById(R.id.news_read_title);
+                    title8.setText(titleOneText);
+                    title8.invalidate();
+                    Log.d("display", "ui updated for news read title");
+                    break;
+                case 8:
+                    TextView title9 = new TextView(anotherActivity);
+                    title9 = (TextView) anotherActivity.findViewById(R.id.news_read_title);
+                    title9.setText(titleOneText);
+                    title9.invalidate();
+                    Log.d("display", "ui updated for news read title");
+                    break;
+                case 9:
+                    TextView title10 = new TextView(anotherActivity);
+                    title10 = (TextView) anotherActivity.findViewById(R.id.news_read_title);
+                    title10.setText(titleOneText);
+                    title10.invalidate();
+                    Log.d("display", "ui updated for news read title");
+                    break;
+            }
+        }
+    }
+}
 
 

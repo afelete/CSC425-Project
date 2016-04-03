@@ -28,5 +28,6 @@
     <string name="news_button">read more</string>
     <string name="title_activity_news_web">NewsWeb</string>
     <string name="title_activity_news_read">NewsRead</string>
+    <string name="url">http://painfullreset.us/fetch.php</string>
 
 </resources>
