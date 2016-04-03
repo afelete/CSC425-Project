@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.team1.csc425_project">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -32,6 +32,10 @@
         <activity
             android:name=".NewsWeb"
             android:label="@string/title_activity_news_web"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".NewsRead"
+            android:label="@string/title_activity_news_read"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

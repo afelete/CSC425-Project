@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.widget.TextView;
 
@@ -20,16 +21,24 @@ import java.net.MalformedURLException;
 import java.net.SocketTimeoutException;
 import java.net.URL;
 
+import static com.team1.csc425_project.News.*;
+
 /**
  * Created by dapless on 4/2/16.
  */
-public class DownloadFilesTask extends AsyncTask<URL, Void, JSONArray> {
+public class DownloadFilesTask extends AsyncTask<Integer, Void, postWrap> {
     String title1 = null;
 
     public News someActivity;
+    public NewsRead anotherActivity;
 
     public DownloadFilesTask(News activity) {
         this.someActivity = activity;
+    }
+
+    public DownloadFilesTask(NewsRead newsRead) {
+        this.anotherActivity=newsRead;
+
     }
 
     public static String connect(URL url) {
@@ -75,7 +84,11 @@ public class DownloadFilesTask extends AsyncTask<URL, Void, JSONArray> {
         }
     }
 
-    protected JSONArray doInBackground(URL... urls) {
+    protected postWrap doInBackground(Integer... buttonNum) {
+        Log.d("array","contents of buttonNum[0]");
+        Log.d("array",buttonNum[0].toString());
+        int buttonPrimitive= buttonNum[0].intValue();
+
 
         JSONArray jArray = null;
         try {
@@ -163,23 +176,42 @@ public class DownloadFilesTask extends AsyncTask<URL, Void, JSONArray> {
         editor.putString("title1", title);
         editor.commit();
         */
-
-        return jArray;
+        postWrap pw = new postWrap();
+        pw.buttonNum = buttonPrimitive;
+        pw.jasonarray=jArray;
+        return pw;
     }
 
 
-    protected void onPostExecute(JSONArray result) {
-        Log.d("display", "during start of postEx title is");
+
+/*
+    @Override
+    protected JSONArray doInBackground(DLParams... params) {
+
+        int buttonPressed=params[0].button;
+        return null;
+    }*/
+
+    protected void onPostExecute(postWrap result) {
+        //Log.d("display", "during start of postEx title is");
         //Log.d("display",result);
+        JSONArray data=result.jasonarray;
+        int buttonPressed= result.buttonNum;
+
+        Log.d("button","when news read is loading buttonNum is");
+        Log.d("button",String.valueOf(buttonPressed));
+
         JSONObject jobject = null;
         String titleOneText = "";
 
         //load titles
+        //skip if on wrong screen, eg no button has been pressed yet
+        if (buttonPressed<0){
         for (int i = 0; i < 10; i++) {
 
 
             try {
-                jobject = result.getJSONObject(i);
+                jobject = data.getJSONObject(i);
             } catch (JSONException e) {
                 e.printStackTrace();
             }
@@ -269,7 +301,7 @@ public class DownloadFilesTask extends AsyncTask<URL, Void, JSONArray> {
 
 
             try {
-                jobject = result.getJSONObject(c);
+                jobject = data.getJSONObject(c);
             } catch (JSONException e) {
                 e.printStackTrace();
             }
@@ -362,8 +394,31 @@ public class DownloadFilesTask extends AsyncTask<URL, Void, JSONArray> {
 
 
                     }
-                }
+                }}
+
+        //update news read body
+        if(buttonPressed>-1){
+        switch (buttonPressed){
+            case 1:
+                try {
+                jobject = data.getJSONObject(0);
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
-        }
+            try {
+                titleOneText = jobject.getString("article");
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+
+                TextView newsReadBody= new TextView(anotherActivity);
+                newsReadBody = (TextView)anotherActivity.findViewById(R.id.news_read_body);
+                newsReadBody.setText(titleOneText);
+                newsReadBody.invalidate();
+                Log.d("display","ui update for news read body");
+                break;
+            }
+        }}}
 
 

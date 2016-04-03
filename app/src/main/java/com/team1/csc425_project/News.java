@@ -1,6 +1,8 @@
 package com.team1.csc425_project;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
@@ -67,7 +69,7 @@ public class News extends AppCompatActivity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);
         //open news article on tap
-        Button news1 = (Button) findViewById(R.id.news_button1);
+      Button news1 = (Button) findViewById(R.id.news_button1);
         news1.setOnClickListener(this);
 
 
@@ -198,9 +200,9 @@ public class News extends AppCompatActivity implements View.OnClickListener{
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
-
+        Integer noButtonPress=-1;
         DownloadFilesTask update = new DownloadFilesTask(this);
-        update.execute(url1);
+        update.execute(noButtonPress);
 
 
     }
@@ -214,11 +216,17 @@ public class News extends AppCompatActivity implements View.OnClickListener{
     public void onClick(View v) {
         Bundle newsBundle = new Bundle();
 
+        //SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
+        //SharedPreferences.Editor editor = sharedPref.edit();
+        //Integer button=null;
         if (v.getId() == R.id.news_button1) {
-            Intent intent = new Intent(v.getContext(), NewsWeb.class);
+            Intent intent = new Intent(v.getContext(), NewsRead.class);
 
-            newsBundle.putString("urlString", articleURL1);
+            newsBundle.putInt("buttonNum", 1);
             intent.putExtras(newsBundle);
+           // editor.putInt("buttonPressed", 1);
+            //editor.commit();
+            //button=0;
             startActivity(intent);
 
         }
