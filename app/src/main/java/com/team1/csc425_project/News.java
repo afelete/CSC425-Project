@@ -48,7 +48,7 @@ public class News extends AppCompatActivity implements View.OnClickListener{
      private GoogleApiClient client;
     private CardView c;
     private View v;
-
+/*
     String articleURL1 = "http://www.painfullreset.us/fetch.php";
     String articleURL2 = "http://www.yahoo.com";
     String articleURL3 = "http://www.bing.com";
@@ -59,7 +59,7 @@ public class News extends AppCompatActivity implements View.OnClickListener{
     String articleURL8 = "http://www.google.com";
     String articleURL9 = "http://www.google.com";
     String articleURL10 = "http://www.google.com";
-
+*/
    // String globalTitle = "notitle";
 
 
@@ -203,6 +203,7 @@ public class News extends AppCompatActivity implements View.OnClickListener{
         Integer noButtonPress=-1;
         DownloadFilesTask update = new DownloadFilesTask(this);
         update.execute(noButtonPress);
+        String foo;
 
 
     }
