@@ -201,9 +201,10 @@ public class News extends AppCompatActivity implements View.OnClickListener{
             e.printStackTrace();
         }
         Integer noButtonPress=-1;
-        DownloadFilesTask update = new DownloadFilesTask(this);
+        //DownloadFilesTask update = new DownloadFilesTask(this);
+        BingAsyncTask update =new BingAsyncTask(this);
         update.execute(noButtonPress);
-        String foo;
+
 
 
     }

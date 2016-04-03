@@ -13,8 +13,9 @@ public class NewsRead extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_news_read);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        //setContentView(R.layout.activity_news_read);
+        setContentView(R.layout.activity_news_web);
+        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 
         Integer buttonNum=0;
 
@@ -25,10 +26,11 @@ public class NewsRead extends AppCompatActivity {
         }
 
         //DLParams params = new DLParams(buttonNum);
-        DownloadFilesTask dl = new DownloadFilesTask(this);
+        //DownloadFilesTask dl = new DownloadFilesTask(this);
+        BingAsyncTask bdl = new BingAsyncTask(this);
         Log.d("array","the contents of buttonNum before passing it into dl.execute()");
         Log.d("array",buttonNum.toString());
-        dl.execute(buttonNum);//download content for main body and title
+        bdl.execute(buttonNum);//download content for main body and title
     }
 
 }
