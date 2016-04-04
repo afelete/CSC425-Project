@@ -9,5 +9,6 @@ import org.json.JSONObject;
 public class postWrap {
     public int buttonNum;
     public static JSONArray jasonarray;
+    public static int loadMore;
 
 }

@@ -24,13 +24,14 @@ public class NewsRead extends AppCompatActivity implements View.OnClickListener 
 
 
 
-
+        Integer loadMore=0;
         Integer buttonNum=0;
 
         //recieve which button was pressed
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             buttonNum = extras.getInt("buttonNum");
+            loadMore = extras.getInt("loadMore");
         }
 
         //DLParams params = new DLParams(buttonNum);
@@ -38,7 +39,7 @@ public class NewsRead extends AppCompatActivity implements View.OnClickListener 
         BingAsyncTask bdl = new BingAsyncTask(this);
         Log.d("array", "the contents of buttonNum before passing it into dl.execute()");
         Log.d("array", buttonNum.toString());
-        bdl.execute(buttonNum);//download content for main body and title
+        bdl.execute(buttonNum,loadMore);//download content for main body and title
 
         //create floating action button with share icon
 

@@ -10,4 +10,6 @@
     <color name="marked_as_read_text">#9E9E9E</color>
     <color name="marked_as_read_title_text">#9E9E9E</color>
     <color name="marked_as_read_summary_text">#BDBDBD</color>
+    <color name="unread_title_text">#000000</color>
+    <color name="unread_summary_text">#000000</color>
 </resources>
