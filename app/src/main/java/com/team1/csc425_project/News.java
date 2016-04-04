@@ -256,7 +256,8 @@ public class News extends AppCompatActivity implements View.OnClickListener{
     }
     public void onClick(View v) {
         Bundle newsBundle = new Bundle();
-
+        int fadedTitleColor = getResources().getColor(R.color.marked_as_read_title_text);
+        int fadedSummaryColor = getResources().getColor(R.color.marked_as_read_summary_text);
         //SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
         //SharedPreferences.Editor editor = sharedPref.edit();
         //Integer button=null;
@@ -267,12 +268,32 @@ public class News extends AppCompatActivity implements View.OnClickListener{
             intent.putExtras(newsBundle);
             startActivity(intent);
 
+            //mark text as read
+            TextView title1 =new TextView(this);
+            title1 = (TextView)findViewById(R.id.title1);
+            title1.setTextColor(fadedTitleColor);
+
+            //mark text as read
+            TextView summary1 = new TextView(this);
+            summary1 = (TextView)findViewById(R.id.content1);
+            summary1.setTextColor(fadedSummaryColor);
+
         }
         if (v.getId() == R.id.card2) {
             Intent intent = new Intent(v.getContext(), NewsRead.class);
             newsBundle.putInt("buttonNum", 2);
             intent.putExtras(newsBundle);
             startActivity(intent);
+
+            //mark text as read
+            TextView title2 =new TextView(this);
+            title2 = (TextView)findViewById(R.id.title2);
+            title2.setTextColor(fadedTitleColor);
+
+            //mark text as read
+            TextView summary2 = new TextView(this);
+            summary2 = (TextView)findViewById(R.id.content2);
+            summary2.setTextColor(fadedSummaryColor);
 
         }
         if (v.getId() == R.id.card3) {
@@ -281,12 +302,32 @@ public class News extends AppCompatActivity implements View.OnClickListener{
             intent.putExtras(newsBundle);
             startActivity(intent);
 
+            //mark text as read
+            TextView title3 =new TextView(this);
+            title3 = (TextView)findViewById(R.id.title3);
+            title3.setTextColor(fadedTitleColor);
+
+            //mark text as read
+            TextView summary3 = new TextView(this);
+            summary3 = (TextView)findViewById(R.id.content3);
+            summary3.setTextColor(fadedSummaryColor);
+
         }
         if (v.getId() == R.id.card4) {
             Intent intent = new Intent(v.getContext(), NewsRead.class);
             newsBundle.putInt("buttonNum", 4);
             intent.putExtras(newsBundle);
             startActivity(intent);
+
+            //mark text as read
+            TextView title4 =new TextView(this);
+            title4 = (TextView)findViewById(R.id.title4);
+            title4.setTextColor(fadedTitleColor);
+
+            //mark text as read
+            TextView summary4 = new TextView(this);
+            summary4 = (TextView)findViewById(R.id.content4);
+            summary4.setTextColor(fadedSummaryColor);
 
         }
         if (v.getId() == R.id.card5) {
@@ -295,12 +336,32 @@ public class News extends AppCompatActivity implements View.OnClickListener{
             intent.putExtras(newsBundle);
             startActivity(intent);
 
+            //mark text as read
+            TextView title5 =new TextView(this);
+            title5 = (TextView)findViewById(R.id.title5);
+            title5.setTextColor(fadedTitleColor);
+
+            //mark text as read
+            TextView summary5 = new TextView(this);
+            summary5 = (TextView)findViewById(R.id.content5);
+            summary5.setTextColor(fadedSummaryColor);
+
         }
         if (v.getId() == R.id.card6) {
             Intent intent = new Intent(v.getContext(), NewsRead.class);
             newsBundle.putInt("buttonNum", 6);
             intent.putExtras(newsBundle);
             startActivity(intent);
+
+            //mark text as read
+            TextView title6 =new TextView(this);
+            title6 = (TextView)findViewById(R.id.title6);
+            title6.setTextColor(fadedTitleColor);
+
+            //mark text as read
+            TextView summary6 = new TextView(this);
+            summary6 = (TextView)findViewById(R.id.content6);
+            summary6.setTextColor(fadedSummaryColor);
 
         }
         if (v.getId() == R.id.card7) {
@@ -309,12 +370,32 @@ public class News extends AppCompatActivity implements View.OnClickListener{
             intent.putExtras(newsBundle);
             startActivity(intent);
 
+            //mark text as read
+            TextView title7 =new TextView(this);
+            title7 = (TextView)findViewById(R.id.title7);
+            title7.setTextColor(fadedTitleColor);
+
+            //mark text as read
+            TextView summary7 = new TextView(this);
+            summary7 = (TextView)findViewById(R.id.content7);
+            summary7.setTextColor(fadedSummaryColor);
+
         }
         if (v.getId() == R.id.card8) {
             Intent intent = new Intent(v.getContext(), NewsRead.class);
             newsBundle.putInt("buttonNum", 8);
             intent.putExtras(newsBundle);
             startActivity(intent);
+
+            //mark text as read
+            TextView title8 =new TextView(this);
+            title8 = (TextView)findViewById(R.id.title8);
+            title8.setTextColor(fadedTitleColor);
+
+            //mark text as read
+            TextView summary8 = new TextView(this);
+            summary8 = (TextView)findViewById(R.id.content8);
+            summary8.setTextColor(fadedSummaryColor);
 
         }
         if (v.getId() == R.id.card9) {
@@ -323,12 +404,32 @@ public class News extends AppCompatActivity implements View.OnClickListener{
             intent.putExtras(newsBundle);
             startActivity(intent);
 
+            //mark text as read
+            TextView title9 =new TextView(this);
+            title9 = (TextView)findViewById(R.id.title9);
+            title9.setTextColor(fadedTitleColor);
+
+            //mark text as read
+            TextView summary9 = new TextView(this);
+            summary9 = (TextView)findViewById(R.id.content9);
+            summary9.setTextColor(fadedSummaryColor);
+
         }
         if (v.getId() == R.id.card10) {
             Intent intent = new Intent(v.getContext(), NewsRead.class);
             newsBundle.putInt("buttonNum", 10);
             intent.putExtras(newsBundle);
             startActivity(intent);
+
+            //mark text as read
+            TextView title10 =new TextView(this);
+            title10 = (TextView)findViewById(R.id.title10);
+            title10.setTextColor(fadedTitleColor);
+
+            //mark text as read
+            TextView summary10 = new TextView(this);
+            summary10 = (TextView)findViewById(R.id.content10);
+            summary10.setTextColor(fadedSummaryColor);
 
         }
     }
