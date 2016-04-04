@@ -8,6 +8,6 @@ import org.json.JSONObject;
  */
 public class postWrap {
     public int buttonNum;
-    public JSONArray jasonarray;
+    public static JSONArray jasonarray;
 
 }

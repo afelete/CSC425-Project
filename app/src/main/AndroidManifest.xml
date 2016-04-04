@@ -23,7 +23,8 @@
         <activity android:name=".GetResources" />
         <activity android:name=".Donate" />
         <activity android:name=".Volunteer" />
-        <activity android:name=".News" />
+        <activity android:name=".News"
+            android:label="News"/>
         <!--
              ATTENTION: This was auto-generated to add Google Play services to your project for
              App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.

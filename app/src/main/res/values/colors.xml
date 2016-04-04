@@ -4,5 +4,7 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="cyan">#00f0ff</color>
-    <color name="news_card_background">#f5f5f5</color>
+    <color name="news_card_background">#F5F5F5</color>
+    <color name="news_background">#E0E0E0</color>
+    <color name="news_card_text">#000000</color>
 </resources>

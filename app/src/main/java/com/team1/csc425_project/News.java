@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Message;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -68,6 +69,12 @@ public class News extends AppCompatActivity implements View.OnClickListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);
+
+        //change action bar text
+        //getActionBar().setTitle("Latest News");
+
+
+
 
         //set news preview cards to be clickable
         CardView card1 = (CardView)findViewById(R.id.card1);
@@ -243,8 +250,8 @@ public class News extends AppCompatActivity implements View.OnClickListener{
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.news_menu, menu);
+       // MenuInflater inflater = getMenuInflater();
+        //inflater.inflate(R.menu.news_menu, menu);
         return true;
     }
     public void onClick(View v) {
