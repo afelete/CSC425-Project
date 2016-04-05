@@ -37,6 +37,18 @@
     <string name="volunteerZipCode">Zip Code:</string>
     <string name="volunteerReset">RESET</string>
     <string name="volunteerSubmit">SUBMIT</string>
+    <string name="Resource">Get Resources</string>
+    <string name="WaterPickUp">Visit one of the locations below to pick up water, water filters, or testing kits</string>
+    <string name="ResourceLoc1">Fire Station #1 \n310 East 5th St \nFlint, MI 48502</string>
+    <string name="ResourceLoc2">Fire Station #3 \n1525 Martin Luther King Ave \nFlint, MI 48503</string>
+    <string name="ResourceLoc3">Fire Station #5 \n3402 Western Rd. \nFlint, MI 48506</string>
+    <string name="ResourceLoc4">Fire Station #6 \n716 West Pierson Rd \nFlint, MI 48505</string>
+    <string name="ResourceLoc5">Fire Station #8 \n202 East Atherton Rd \nFlint, MI 48507</string>
+    <string name="ResourceMapButton4">MAP</string>
+    <string name="ResourceMapButton1">MAP</string>
+    <string name="ResourceMapButton2">MAP</string>
+    <string name="ResourceMapButton3">MAP</string>
+    <string name="ResourceMapButton5">MAP</string>
 
-    
+
 </resources>
