@@ -1,7 +1,5 @@
 package com.team1.csc425_project;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -20,7 +18,6 @@ public class Volunteer extends AppCompatActivity {
     private EditText addressEditText; //where user address is stored
     private EditText zipEditText; //where user zip code is stored
     private String telephone;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,4 +85,5 @@ public class Volunteer extends AppCompatActivity {
 
         }
     };
+
 }
