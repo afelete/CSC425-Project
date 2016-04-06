@@ -6,9 +6,10 @@
 
     xmlns:app="http://schemas.android.com/apk/res-auto"
 
+    android:background="@drawable/bg"
 
-    tools:context="com.team1.csc425_project.News"
-    android:background="@color/news_background">
+    tools:context="com.team1.csc425_project.News">
+    <!--android:background="@color/news_background"-->
 
     <ScrollView
         android:layout_width="match_parent"
@@ -431,7 +432,8 @@
                 android:layout_height="wrap_content"
                 android:text="Load 10 More"
                 android:id="@+id/loadMore"
-                android:layout_gravity="center_horizontal" />
+                android:layout_gravity="center_horizontal"
+                android:backgroundTint="@color/news_card_background"/>
 
         </LinearLayout>
     </ScrollView>

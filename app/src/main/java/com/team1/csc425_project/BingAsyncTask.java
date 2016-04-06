@@ -63,18 +63,6 @@ public class BingAsyncTask extends AsyncTask<Integer, Void, postWrap> {
         JSONArray jArray;
         HttpClient httpClient = new DefaultHttpClient();
 
-
-        //Add all array list
-        //ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
-        //nameValuePairs.add(new BasicNameValuePair("Query", "'xbox'"));
-        //nameValuePairs.add(new BasicNameValuePair("Market", "'en-us'"));
-        //nameValuePairs.add(new BasicNameValuePair("ImageFilters", "'Size:Small'"));
-        //String paramsString = URLEncodedUtils.format(nameValuePairs, "UTF-8");
-
-
-        //Log.e("Get link result ", APILink + SECTION[0] + "?" + paramsString);
-        //Build Link
-
         String nextUrl=APILink;
         Log.d("next50","requesting url "+nextUrl);
 

@@ -37,8 +37,8 @@ public class Volunteer extends AppCompatActivity {
                     telephone = phoneInfo.getLine1Number();
                 } else {
 
-                    // permission denied, boo! Disable the
-                    // functionality that depends on this permission.
+                    // permission denied
+                    // the app prolly crashes idk
                 }
                 return;
             }

@@ -15,10 +15,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Button resourceButton = (Button) findViewById(R.id.resourceButton);
         resourceButton.setOnClickListener(this);
+
         Button donateButton = (Button) findViewById(R.id.donateButton);
         donateButton.setOnClickListener(this);
+
         Button volunteerButton = (Button) findViewById(R.id.volunteerButton);
         volunteerButton.setOnClickListener(this);
+
         Button newsButton = (Button) findViewById(R.id.newsButton);
         newsButton.setOnClickListener(this);
     }
