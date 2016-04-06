@@ -18,21 +18,21 @@ public class Donate extends AppCompatActivity {
     {
         Intent intent=null, chooser=null;
 
-        if(view.getId()==R.id.donateMapButton1)
+        if(view.getId()==R.id.resourceMapButton1)
         {
             intent=new Intent(android.content.Intent.ACTION_VIEW);
             intent.setData(Uri.parse("geo:43.023624,-83.69435?q=43.023624,-83.69435"));
             chooser=Intent.createChooser(intent,"Launch Maps");
             startActivity(chooser);
         }
-        if(view.getId()==R.id.donateMapButton2)
+        if(view.getId()==R.id.resourceMapButton2)
         {
             intent=new Intent(android.content.Intent.ACTION_VIEW);
             intent.setData(Uri.parse("geo:43.006097,-83.686161?q=43.006097,-83.686161"));
             chooser=Intent.createChooser(intent,"Launch Maps");
             startActivity(chooser);
         }
-        if(view.getId()==R.id.donateMapButton3)
+        if(view.getId()==R.id.resourceMapButton3)
         {
             intent=new Intent(android.content.Intent.ACTION_VIEW);
             intent.setData(Uri.parse("geo:43.008456,-83.666178?q=43.008456,-83.666178"));

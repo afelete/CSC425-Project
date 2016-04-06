@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/Donate"
-            android:id="@+id/donateHeader"
+            android:id="@+id/resourceHeader"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:textSize="40sp"
@@ -39,7 +39,7 @@
             android:layout_marginTop="37dp"
             android:textStyle="bold|normal"
             android:textColor="#ffffff"
-            android:layout_below="@+id/donateHeader"
+            android:layout_below="@+id/resourceHeader"
             android:layout_centerHorizontal="true"
             android:textSize="25sp" />
 
@@ -48,7 +48,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/DonateLoc1Text"
-            android:id="@+id/donateLoc1Text"
+            android:id="@+id/resourceLoc1"
             android:layout_below="@+id/donatePageIntroText"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
@@ -60,8 +60,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/DonateMapButton1"
-            android:id="@+id/donateMapButton1"
-            android:layout_alignBottom="@+id/donateLoc1Text"
+            android:id="@+id/resourceMapButton1"
+            android:layout_alignBottom="@+id/resourceLoc1"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:onClick="process"
@@ -72,11 +72,11 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/DonateLoc2Text"
-            android:id="@+id/donateLoc2Text"
+            android:id="@+id/resourceLoc2"
             android:layout_marginTop="33dp"
             android:textStyle="bold"
             android:textColor="#ffffff"
-            android:layout_below="@+id/donateLoc1Text"
+            android:layout_below="@+id/resourceLoc1"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
 
@@ -84,10 +84,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/DonateMapButton2"
-            android:id="@+id/donateMapButton2"
-            android:layout_alignBottom="@+id/donateLoc2Text"
-            android:layout_alignLeft="@+id/donateMapButton1"
-            android:layout_alignStart="@+id/donateMapButton1"
+            android:id="@+id/resourceMapButton2"
+            android:layout_alignBottom="@+id/resourceLoc2"
+            android:layout_alignLeft="@+id/resourceMapButton1"
+            android:layout_alignStart="@+id/resourceMapButton1"
             android:onClick="process"/>
 
         <TextView
@@ -95,8 +95,8 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/DonateLoc3Text"
-            android:id="@+id/donateLoc3Text"
-            android:layout_below="@+id/donateLoc2Text"
+            android:id="@+id/resourceLoc3"
+            android:layout_below="@+id/resourceLoc2"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_marginTop="33dp"
@@ -107,10 +107,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/DonateMapButton3"
-            android:id="@+id/donateMapButton3"
-            android:layout_alignBottom="@+id/donateLoc3Text"
-            android:layout_alignLeft="@+id/donateMapButton2"
-            android:layout_alignStart="@+id/donateMapButton2"
+            android:id="@+id/resourceMapButton3"
+            android:layout_alignBottom="@+id/resourceLoc3"
+            android:layout_alignLeft="@+id/resourceMapButton2"
+            android:layout_alignStart="@+id/resourceMapButton2"
             android:onClick="process"/>
 
         <TextView
@@ -122,7 +122,7 @@
             android:layout_marginTop="37dp"
             android:textStyle="bold|normal"
             android:textColor="#ffffff"
-            android:layout_below="@+id/donateLoc3Text"
+            android:layout_below="@+id/resourceLoc3"
             android:layout_centerHorizontal="true"
             android:textSize="25sp" />
 
