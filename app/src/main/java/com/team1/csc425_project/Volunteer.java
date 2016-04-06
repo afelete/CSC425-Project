@@ -1,6 +1,10 @@
 package com.team1.csc425_project;
 
+import android.Manifest;
 import android.content.Context;
+import android.content.pm.PackageManager;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -18,6 +22,31 @@ public class Volunteer extends AppCompatActivity {
     private EditText addressEditText; //where user address is stored
     private EditText zipEditText; //where user zip code is stored
     private String telephone;
+    private final int MY_PERMISSIONS_REQUEST_READ_SMS = 1;
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case MY_PERMISSIONS_REQUEST_READ_SMS: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                    // permission was granted, yay! Do the
+                    TelephonyManager phoneInfo = (TelephonyManager)getSystemService(Context.TELEPHONY_SERVICE);
+                    telephone = phoneInfo.getLine1Number();
+                } else {
+
+                    // permission denied, boo! Disable the
+                    // functionality that depends on this permission.
+                }
+                return;
+            }
+
+            // other 'case' lines to check for other
+            // permissions this app might request
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,9 +59,20 @@ public class Volunteer extends AppCompatActivity {
         addressEditText = (EditText) findViewById(R.id.addressEditText);
         zipEditText = (EditText) findViewById(R.id.zipEditText);
 
+        //request permission for telephony from user
+        //this is a new feature in android 6.0, which is why it would run on my phone -David
+
+        //check to see if app already has this permission and ask if it doesn't
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_SMS) != PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_SMS},
+                    MY_PERMISSIONS_REQUEST_READ_SMS);
+        }
+
         //Get Devices phone number
-        TelephonyManager phoneInfo = (TelephonyManager)getSystemService(Context.TELEPHONY_SERVICE);
-        telephone = phoneInfo.getLine1Number();
+
+        //moved into onRequestPermissionResult
+        //TelephonyManager phoneInfo = (TelephonyManager)getSystemService(Context.TELEPHONY_SERVICE);
+        //telephone = phoneInfo.getLine1Number();
 
         //Declare the button and watch for the user to click it
         Button submitButton = (Button) findViewById(R.id.submitButton);
