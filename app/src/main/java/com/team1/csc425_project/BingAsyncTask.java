@@ -55,12 +55,12 @@ public class BingAsyncTask extends AsyncTask<Integer, Void, postWrap> {
         //Only Get request work for this API.
         //Prepare Post request.
 
-        int buttonPrimitive = buttonNum[0].intValue();
-        int loadMore=buttonNum[1].intValue();
+        int buttonPrimitive = buttonNum[0];
+        int loadMore=buttonNum[1];
 
 
 
-        JSONArray jArray = null;
+        JSONArray jArray;
         HttpClient httpClient = new DefaultHttpClient();
 
 
@@ -162,7 +162,7 @@ public class BingAsyncTask extends AsyncTask<Integer, Void, postWrap> {
 
         //Log.d("display", "during start of postEx title is");
         //Log.d("display",result);
-        JSONArray data=_postWrap.jasonarray;
+        JSONArray data=postWrap.jasonarray;
         int buttonPressed= _postWrap.buttonNum;
 
         Log.d("button","when news read is loading buttonNum is");
@@ -191,72 +191,61 @@ public class BingAsyncTask extends AsyncTask<Integer, Void, postWrap> {
 
                 switch (i) {
                     case 0:
-                        TextView title1 = new TextView(someActivity);
-                        title1 = (TextView) someActivity.findViewById(R.id.title1);
+                        TextView title1 = (TextView) someActivity.findViewById(R.id.title1);
                         title1.setText(titleOneText);
                         title1.invalidate();
                         Log.d("display", "ui updated for title1");
                         break;
-
                     case 1:
-                        TextView title2 = new TextView(someActivity);
-                        title2 = (TextView) someActivity.findViewById(R.id.title2);
+                        TextView title2 = (TextView) someActivity.findViewById(R.id.title2);
                         title2.setText(titleOneText);
                         title2.invalidate();
                         Log.d("display", "ui updated for title2");
                         break;
                     case 2:
-                        TextView title3 = new TextView(someActivity);
-                        title3 = (TextView) someActivity.findViewById(R.id.title3);
+                        TextView title3 = (TextView) someActivity.findViewById(R.id.title3);
                         title3.setText(titleOneText);
                         title3.invalidate();
                         Log.d("display", "ui updated for title3");
                         break;
                     case 3:
-                        TextView title4 = new TextView(someActivity);
-                        title4 = (TextView) someActivity.findViewById(R.id.title4);
+                        TextView title4 = (TextView) someActivity.findViewById(R.id.title4);
                         title4.setText(titleOneText);
                         title4.invalidate();
                         Log.d("display", "ui updated for title4");
                         break;
                     case 4:
-                        TextView title5 = new TextView(someActivity);
-                        title5 = (TextView) someActivity.findViewById(R.id.title5);
+                        TextView title5 = (TextView) someActivity.findViewById(R.id.title5);
                         title5.setText(titleOneText);
                         title5.invalidate();
                         Log.d("display", "ui updated for title5");
                         break;
                     case 5:
-                        TextView title6 = new TextView(someActivity);
-                        title6 = (TextView) someActivity.findViewById(R.id.title6);
+                        TextView title6 = (TextView) someActivity.findViewById(R.id.title6);
                         title6.setText(titleOneText);
                         title6.invalidate();
                         Log.d("display", "ui updated for title6");
                         break;
                     case 6:
-                        TextView title7 = new TextView(someActivity);
-                        title7 = (TextView) someActivity.findViewById(R.id.title7);
+                        TextView title7 = (TextView) someActivity.findViewById(R.id.title7);
                         title7.setText(titleOneText);
                         title7.invalidate();
                         Log.d("display", "ui updated for title7");
                         break;
                     case 7:
-                        TextView title8 = new TextView(someActivity);
-                        title8 = (TextView) someActivity.findViewById(R.id.title8);
+                        TextView title8 = (TextView) someActivity.findViewById(R.id.title8);
                         title8.setText(titleOneText);
                         title8.invalidate();
                         Log.d("display", "ui updated for title8");
                         break;
                     case 8:
-                        TextView title9 = new TextView(someActivity);
-                        title9 = (TextView) someActivity.findViewById(R.id.title9);
+                        TextView title9 = (TextView) someActivity.findViewById(R.id.title9);
                         title9.setText(titleOneText);
                         title9.invalidate();
                         Log.d("display", "ui updated for title9");
                         break;
                     case 9:
-                        TextView title10 = new TextView(someActivity);
-                        title10 = (TextView) someActivity.findViewById(R.id.title10);
+                        TextView title10 = (TextView) someActivity.findViewById(R.id.title10);
                         title10.setText(titleOneText);
                         title10.invalidate();
                         Log.d("display", "ui updated for title10");
@@ -383,22 +372,7 @@ public class BingAsyncTask extends AsyncTask<Integer, Void, postWrap> {
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
-                    /*
-                    WebView newsWebView = (WebView)anotherActivity.findViewById(R.id.newsWebView);
-                    newsWebView.getSettings().setJavaScriptEnabled(true);
 
-                    newsWebView.setWebViewClient(new WebViewClient());
-                    newsWebView.loadUrl(titleOneText);
-                    */
-
-                    //old news read activity update
-                    /*
-                    TextView newsReadBody1= new TextView(anotherActivity);
-                    newsReadBody1 = (TextView)anotherActivity.findViewById(R.id.news_read_body);
-                    newsReadBody1.setText(titleOneText);
-                    newsReadBody1.invalidate();
-                    Log.d("display","ui update for news read body");
-                    */
                     break;
                 case 2:
                     try {
@@ -412,12 +386,7 @@ public class BingAsyncTask extends AsyncTask<Integer, Void, postWrap> {
                         e.printStackTrace();
                     }
 
-/*
-                    TextView newsReadBody2= new TextView(anotherActivity);
-                    newsReadBody2 = (TextView)anotherActivity.findViewById(R.id.news_read_body);
-                    newsReadBody2.setText(titleOneText);
-                    newsReadBody2.invalidate();
-                    Log.d("display","ui update for news read body");*/
+
                     break;
                 case 3:
                     try {
@@ -431,12 +400,7 @@ public class BingAsyncTask extends AsyncTask<Integer, Void, postWrap> {
                         e.printStackTrace();
                     }
 
-/*
-                    TextView newsReadBody3= new TextView(anotherActivity);
-                    newsReadBody3 = (TextView)anotherActivity.findViewById(R.id.news_read_body);
-                    newsReadBody3.setText(titleOneText);
-                    newsReadBody3.invalidate();
-                    Log.d("display","ui update for news read body");*/
+
                     break;
                 case 4:
                     try {
@@ -450,12 +414,7 @@ public class BingAsyncTask extends AsyncTask<Integer, Void, postWrap> {
                         e.printStackTrace();
                     }
 
-/*
-                    TextView newsReadBody4= new TextView(anotherActivity);
-                    newsReadBody4 = (TextView)anotherActivity.findViewById(R.id.news_read_body);
-                    newsReadBody4.setText(titleOneText);
-                    newsReadBody4.invalidate();
-                    Log.d("display","ui update for news read body");*/
+
                     break;
                 case 5:
                     try {
@@ -468,13 +427,7 @@ public class BingAsyncTask extends AsyncTask<Integer, Void, postWrap> {
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
-/*
 
-                    TextView newsReadBody5= new TextView(anotherActivity);
-                    newsReadBody5 = (TextView)anotherActivity.findViewById(R.id.news_read_body);
-                    newsReadBody5.setText(titleOneText);
-                    newsReadBody5.invalidate();
-                    Log.d("display","ui update for news read body");*/
                     break;
                 case 6:
                     try {
@@ -488,12 +441,7 @@ public class BingAsyncTask extends AsyncTask<Integer, Void, postWrap> {
                         e.printStackTrace();
                     }
 
-/*
-                    TextView newsReadBody6= new TextView(anotherActivity);
-                    newsReadBody6 = (TextView)anotherActivity.findViewById(R.id.news_read_body);
-                    newsReadBody6.setText(titleOneText);
-                    newsReadBody6.invalidate();
-                    Log.d("display","ui update for news read body");*/
+
                     break;
                 case 7:
                     try {
@@ -507,12 +455,7 @@ public class BingAsyncTask extends AsyncTask<Integer, Void, postWrap> {
                         e.printStackTrace();
                     }
 
-/*
-                    TextView newsReadBody= new TextView(anotherActivity);
-                    newsReadBody = (TextView)anotherActivity.findViewById(R.id.news_read_body);
-                    newsReadBody.setText(titleOneText);
-                    newsReadBody.invalidate();
-                    Log.d("display","ui update for news read body");*/
+
                     break;
                 case 8:
                     try {
@@ -526,12 +469,7 @@ public class BingAsyncTask extends AsyncTask<Integer, Void, postWrap> {
                         e.printStackTrace();
                     }
 
-/*
-                    TextView newsReadBody7= new TextView(anotherActivity);
-                    newsReadBody7 = (TextView)anotherActivity.findViewById(R.id.news_read_body);
-                    newsReadBody7.setText(titleOneText);
-                    newsReadBody7.invalidate();
-                    Log.d("display","ui update for news read body");*/
+
                     break;
                 case 9:
                     try {
@@ -545,12 +483,7 @@ public class BingAsyncTask extends AsyncTask<Integer, Void, postWrap> {
                         e.printStackTrace();
                     }
 
-/*
-                    TextView newsReadBody8= new TextView(anotherActivity);
-                    newsReadBody8 = (TextView)anotherActivity.findViewById(R.id.news_read_body);
-                    newsReadBody8.setText(titleOneText);
-                    newsReadBody8.invalidate();
-                    Log.d("display","ui update for news read body");*/
+
                     break;
                 case 10:
                     try {
@@ -564,12 +497,7 @@ public class BingAsyncTask extends AsyncTask<Integer, Void, postWrap> {
                         e.printStackTrace();
                     }
 
-/*
-                    TextView newsReadBody9= new TextView(anotherActivity);
-                    newsReadBody9 = (TextView)anotherActivity.findViewById(R.id.news_read_body);
-                    newsReadBody9.setText(titleOneText);
-                    newsReadBody9.invalidate();
-                    Log.d("display","ui update for news read body");*/
+
                     break;
             }
 
@@ -591,81 +519,6 @@ public class BingAsyncTask extends AsyncTask<Integer, Void, postWrap> {
                 e.printStackTrace();
             }
 
-            //load the title
-            /*
-            switch (buttonPressed) {
-                case 0:
-                    TextView title1 = new TextView(anotherActivity);
-                    title1 = (TextView) anotherActivity.findViewById(R.id.news_read_title);
-                    title1.setText(titleOneText);
-                    title1.invalidate();
-                    Log.d("display", "ui updated for news read title");
-                    break;
-
-                case 1:
-                    TextView title2 = new TextView(anotherActivity);
-                    title2 = (TextView) anotherActivity.findViewById(R.id.news_read_title);
-                    title2.setText(titleOneText);
-                    title2.invalidate();
-                    Log.d("display", "ui updated for news read title");
-                    break;
-                case 2:
-                    TextView title3 = new TextView(anotherActivity);
-                    title3 = (TextView) anotherActivity.findViewById(R.id.news_read_title);
-                    title3.setText(titleOneText);
-                    title3.invalidate();
-                    Log.d("display", "ui updated for news read title");
-                    break;
-                case 3:
-                    TextView title4 = new TextView(anotherActivity);
-                    title4 = (TextView) anotherActivity.findViewById(R.id.news_read_title);
-                    title4.setText(titleOneText);
-                    title4.invalidate();
-                    Log.d("display", "ui updated for news read title");
-                    break;
-                case 4:
-                    TextView title5 = new TextView(anotherActivity);
-                    title5 = (TextView) anotherActivity.findViewById(R.id.news_read_title);
-                    title5.setText(titleOneText);
-                    title5.invalidate();
-                    Log.d("display", "ui updated for news read title");
-                    break;
-                case 5:
-                    TextView title6 = new TextView(anotherActivity);
-                    title6 = (TextView) anotherActivity.findViewById(R.id.news_read_title);
-                    title6.setText(titleOneText);
-                    title6.invalidate();
-                    Log.d("display", "ui updated for news read title");
-                    break;
-                case 6:
-                    TextView title7 = new TextView(anotherActivity);
-                    title7 = (TextView) anotherActivity.findViewById(R.id.news_read_title);
-                    title7.setText(titleOneText);
-                    title7.invalidate();
-                    Log.d("display", "ui updated for news read title");
-                    break;
-                case 7:
-                    TextView title8 = new TextView(anotherActivity);
-                    title8 = (TextView) anotherActivity.findViewById(R.id.news_read_title);
-                    title8.setText(titleOneText);
-                    title8.invalidate();
-                    Log.d("display", "ui updated for news read title");
-                    break;
-                case 8:
-                    TextView title9 = new TextView(anotherActivity);
-                    title9 = (TextView) anotherActivity.findViewById(R.id.news_read_title);
-                    title9.setText(titleOneText);
-                    title9.invalidate();
-                    Log.d("display", "ui updated for news read title");
-                    break;
-                case 9:
-                    TextView title10 = new TextView(anotherActivity);
-                    title10 = (TextView) anotherActivity.findViewById(R.id.news_read_title);
-                    title10.setText(titleOneText);
-                    title10.invalidate();
-                    Log.d("display", "ui updated for news read title");
-                    break;
-    }*/
 }
 }
 }
