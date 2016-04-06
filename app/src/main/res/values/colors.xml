@@ -8,7 +8,7 @@
     <color name="news_background">#E0E0E0</color>
     <color name="news_card_text">#000000</color>
     <color name="marked_as_read_text">#9E9E9E</color>
-    <color name="marked_as_read_title_text">#9E9E9E</color>
+    <color name="marked_as_read_title_text">#BDBDBD</color>
     <color name="marked_as_read_summary_text">#BDBDBD</color>
     <color name="unread_title_text">#000000</color>
     <color name="unread_summary_text">#000000</color>
