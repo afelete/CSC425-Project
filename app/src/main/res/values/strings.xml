@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CSC425-Project</string>
+    <string name="app_name">Flint Water</string>
     <string name="headerTextView">Flint Water Info</string>
     <string name="volunteerButton">Volunteer</string>
     <string name="donateButton">Donate</string>
@@ -10,15 +10,15 @@
     <string name="DonatePageIntroText">
             Water Donations</string>
     <string name="DonateLoc1Text">100 or less cases:\n
-            \n Catholic Charities Center for Hope \n 517 E. Fifth Ave
-            \n Flint, MI 48503 \n Monday-Friday 9am-4pm</string>
+            \nCatholic Charities Center for Hope \n517 E. Fifth Ave
+            \nFlint, MI 48503 \nMonday-Friday \n9am-4pm</string>
     <string name="DonateMapButton1">MAP</string>
-    <string name="DonateLoc2Text">Red Cross \n 1401 Grand Traverse \n Flint, MI 48503
-            \n Saturday-Sunday 9am-4pm</string>
+    <string name="DonateLoc2Text">Red Cross \n1401 Grand Traverse \nFlint, MI 48503
+            \nSaturday-Sunday \n9am-4pm</string>
     <string name="DonateMapButton2">MAP</string>
     <string name="DonateLoc3Text">More than 100 cases:\n
-            \n Please go to: \n Food Bank of Eastern Michigan \n 2300 Lapeer Rd
-            \n Flint, MI 48503 \n Monday-Friday 8am-4:30pm</string>
+            \nFood Bank of Eastern Michigan \n2300 Lapeer Rd
+            \nFlint, MI 48503 \nMonday-Friday \n8am-4:30pm</string>
     <string name="DonateMapButton3">MAP</string>
     <string name="FinancialDonationsText">Financial Donations</string>
     <string name="DonateFinancialAddress">www.FlintKids.org</string>
