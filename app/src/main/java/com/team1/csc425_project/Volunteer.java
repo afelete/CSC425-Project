@@ -3,6 +3,7 @@ package com.team1.csc425_project;
 import android.Manifest;
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -96,8 +97,9 @@ public class Volunteer extends AppCompatActivity {
             String form = name + System.lineSeparator() + dob + System.lineSeparator() +
                     address + System.lineSeparator() + zip + System.lineSeparator() + telephone;
 
-            Intent emailIntent = new Intent(Intent.ACTION_SEND);
+            Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
             emailIntent.setType("text/plain");
+            emailIntent.setData(Uri.parse("mailto:"));
             emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[] { "wikeegan@umflint.edu" });
             emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Volunteering");
             emailIntent.putExtra(Intent.EXTRA_TEXT, form);
