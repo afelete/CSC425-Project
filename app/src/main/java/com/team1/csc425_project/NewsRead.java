@@ -34,8 +34,6 @@ public class NewsRead extends AppCompatActivity implements View.OnClickListener 
             loadMore = extras.getInt("loadMore");
         }
 
-        //DLParams params = new DLParams(buttonNum);
-        //DownloadFilesTask dl = new DownloadFilesTask(this);
         BingAsyncTask bdl = new BingAsyncTask(this);
         Log.d("array", "the contents of buttonNum before passing it into dl.execute()");
         Log.d("array", buttonNum.toString());
