@@ -6,7 +6,7 @@ import org.json.JSONObject;
 /**
  * Created by dapless on 4/3/16.
  */
-public class postWrap {
+public class BingAsyncPostWrapper {
     public int buttonNum;
     public static JSONArray jasonarray;
     public static int loadMore;

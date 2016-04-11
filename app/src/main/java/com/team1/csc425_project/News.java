@@ -27,7 +27,7 @@ public class News extends AppCompatActivity implements View.OnClickListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);
-        postWrap pw=new postWrap();
+        BingAsyncPostWrapper pw=new BingAsyncPostWrapper();
 
         //set news preview cards to be clickable
         CardView card1 = (CardView)findViewById(R.id.card1);
@@ -93,11 +93,11 @@ public class News extends AppCompatActivity implements View.OnClickListener{
     public void onClick(View v) {
 
         if (v.getId() == R.id.loadMore) {
-            postWrap.loadMore=postWrap.loadMore+10;
-            Log.d("loadMore","loadMore is "+postWrap.loadMore);
+            BingAsyncPostWrapper.loadMore=BingAsyncPostWrapper.loadMore+10;
+            Log.d("loadMore","loadMore is "+BingAsyncPostWrapper.loadMore);
             BingAsyncTask update =new BingAsyncTask(this);
 
-            update.execute(-1, postWrap.loadMore);
+            update.execute(-1, BingAsyncPostWrapper.loadMore);
 
             int unreadTitleColor =getResources().getColor(R.color.unread_title_text);
             int unreadSummaryColor = getResources().getColor(R.color.unread_summary_text);
@@ -217,7 +217,7 @@ public class News extends AppCompatActivity implements View.OnClickListener{
             Intent intent = new Intent(v.getContext(), NewsRead.class);
 
             newsBundle.putInt("buttonNum", 1);
-            newsBundle.putInt("loadMore",postWrap.loadMore);
+            newsBundle.putInt("loadMore",BingAsyncPostWrapper.loadMore);
             intent.putExtras(newsBundle);
             startActivity(intent);
 
@@ -235,7 +235,7 @@ public class News extends AppCompatActivity implements View.OnClickListener{
         if (v.getId() == R.id.card2) {
             Intent intent = new Intent(v.getContext(), NewsRead.class);
             newsBundle.putInt("buttonNum", 2);
-            newsBundle.putInt("loadMore",postWrap.loadMore);
+            newsBundle.putInt("loadMore",BingAsyncPostWrapper.loadMore);
 
             intent.putExtras(newsBundle);
             startActivity(intent);
@@ -254,7 +254,7 @@ public class News extends AppCompatActivity implements View.OnClickListener{
         if (v.getId() == R.id.card3) {
             Intent intent = new Intent(v.getContext(), NewsRead.class);
             newsBundle.putInt("buttonNum", 3);
-            newsBundle.putInt("loadMore",postWrap.loadMore);
+            newsBundle.putInt("loadMore",BingAsyncPostWrapper.loadMore);
 
             intent.putExtras(newsBundle);
             startActivity(intent);
@@ -273,7 +273,7 @@ public class News extends AppCompatActivity implements View.OnClickListener{
         if (v.getId() == R.id.card4) {
             Intent intent = new Intent(v.getContext(), NewsRead.class);
             newsBundle.putInt("buttonNum", 4);
-            newsBundle.putInt("loadMore",postWrap.loadMore);
+            newsBundle.putInt("loadMore",BingAsyncPostWrapper.loadMore);
 
             intent.putExtras(newsBundle);
             startActivity(intent);
@@ -292,7 +292,7 @@ public class News extends AppCompatActivity implements View.OnClickListener{
         if (v.getId() == R.id.card5) {
             Intent intent = new Intent(v.getContext(), NewsRead.class);
             newsBundle.putInt("buttonNum", 5);
-            newsBundle.putInt("loadMore",postWrap.loadMore);
+            newsBundle.putInt("loadMore",BingAsyncPostWrapper.loadMore);
 
             intent.putExtras(newsBundle);
             startActivity(intent);
@@ -311,7 +311,7 @@ public class News extends AppCompatActivity implements View.OnClickListener{
         if (v.getId() == R.id.card6) {
             Intent intent = new Intent(v.getContext(), NewsRead.class);
             newsBundle.putInt("buttonNum", 6);
-            newsBundle.putInt("loadMore",postWrap.loadMore);
+            newsBundle.putInt("loadMore",BingAsyncPostWrapper.loadMore);
 
             intent.putExtras(newsBundle);
             startActivity(intent);
@@ -330,7 +330,7 @@ public class News extends AppCompatActivity implements View.OnClickListener{
         if (v.getId() == R.id.card7) {
             Intent intent = new Intent(v.getContext(), NewsRead.class);
             newsBundle.putInt("buttonNum", 7);
-            newsBundle.putInt("loadMore",postWrap.loadMore);
+            newsBundle.putInt("loadMore",BingAsyncPostWrapper.loadMore);
 
             intent.putExtras(newsBundle);
             startActivity(intent);
@@ -349,7 +349,7 @@ public class News extends AppCompatActivity implements View.OnClickListener{
         if (v.getId() == R.id.card8) {
             Intent intent = new Intent(v.getContext(), NewsRead.class);
             newsBundle.putInt("buttonNum", 8);
-            newsBundle.putInt("loadMore",postWrap.loadMore);
+            newsBundle.putInt("loadMore",BingAsyncPostWrapper.loadMore);
 
             intent.putExtras(newsBundle);
             startActivity(intent);
@@ -368,7 +368,7 @@ public class News extends AppCompatActivity implements View.OnClickListener{
         if (v.getId() == R.id.card9) {
             Intent intent = new Intent(v.getContext(), NewsRead.class);
             newsBundle.putInt("buttonNum", 9);
-            newsBundle.putInt("loadMore",postWrap.loadMore);
+            newsBundle.putInt("loadMore",BingAsyncPostWrapper.loadMore);
 
             intent.putExtras(newsBundle);
             startActivity(intent);
@@ -387,7 +387,7 @@ public class News extends AppCompatActivity implements View.OnClickListener{
         if (v.getId() == R.id.card10) {
             Intent intent = new Intent(v.getContext(), NewsRead.class);
             newsBundle.putInt("buttonNum", 10);
-            newsBundle.putInt("loadMore",postWrap.loadMore);
+            newsBundle.putInt("loadMore",BingAsyncPostWrapper.loadMore);
 
             intent.putExtras(newsBundle);
             startActivity(intent);

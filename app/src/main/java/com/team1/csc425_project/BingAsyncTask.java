@@ -30,7 +30,7 @@ import java.io.InputStreamReader;
 /**
  * Created by dapless on 4/3/16.
  */
-public class BingAsyncTask extends AsyncTask<Integer, Void, postWrap> {
+public class BingAsyncTask extends AsyncTask<Integer, Void, BingAsyncPostWrapper> {
 
     //private String APILink = "https://api.datamarket.azure.com/Bing/Search/v1/";
     private static String APILink = "https://api.datamarket.azure.com/Bing/SearchWeb/v1/Web?Query=%27flint%20water%20%27&$format=json";
@@ -49,7 +49,7 @@ public class BingAsyncTask extends AsyncTask<Integer, Void, postWrap> {
 
     }
     @Override
-    protected postWrap doInBackground(Integer... buttonNum) {
+    protected BingAsyncPostWrapper doInBackground(Integer... buttonNum) {
         String result = "";
         //For some reason post method doesn't work.
         //Only Get request work for this API.
@@ -106,7 +106,7 @@ public class BingAsyncTask extends AsyncTask<Integer, Void, postWrap> {
 
         //Extract link from JSON
         //String to Json
-        postWrap pw = new postWrap();
+        BingAsyncPostWrapper pw = new BingAsyncPostWrapper();
         try {
             Log.d("result","contents of result are "+result);
             JSONObject bingResult =new JSONObject(result);
@@ -120,20 +120,20 @@ public class BingAsyncTask extends AsyncTask<Integer, Void, postWrap> {
             //jArray = new JSONArray(result);
 
             //set bing url to load next 50 results if we are at the 50th result.
-            if (postWrap.loadMore>49){
+            if (BingAsyncPostWrapper.loadMore>49){
                 //BingAsyncTask.APILink=next50;
                 //Log.d("next50","url for next 50 results is "+next50);
-                skip=skip+postWrap.loadMore;
-                postWrap.loadMore=0;
+                skip=skip+BingAsyncPostWrapper.loadMore;
+                BingAsyncPostWrapper.loadMore=0;
             }
 
             pw.buttonNum = buttonPrimitive;
-            postWrap.jasonarray = jArray;
+            BingAsyncPostWrapper.jasonarray = jArray;
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
-        Log.d("pw","pw.jasonarray is "+postWrap.jasonarray);
+        Log.d("pw","pw.jasonarray is "+BingAsyncPostWrapper.jasonarray);
         //pw.loadMore=loadMore;
         return pw;
     }
@@ -141,17 +141,17 @@ public class BingAsyncTask extends AsyncTask<Integer, Void, postWrap> {
 
 
     @Override
-    protected void onPostExecute(postWrap _postWrap) {
+    protected void onPostExecute(BingAsyncPostWrapper _BingAsyncPostWrapper) {
 
         //how many articles to move down recieve list from bing
         //used to load new articles
         //for example a value of 10 would load an entire new set of search results.
-        //int loadMore=result.loadMore;//replaced by postWrap.loadmore
+        //int loadMore=result.loadMore;//replaced by BingAsyncBingAsyncPostWrapperper.loadmore
 
         //Log.d("display", "during start of postEx title is");
         //Log.d("display",result);
-        JSONArray data=postWrap.jasonarray;
-        int buttonPressed= _postWrap.buttonNum;
+        JSONArray data=BingAsyncPostWrapper.jasonarray;
+        int buttonPressed= _BingAsyncPostWrapper.buttonNum;
 
         Log.d("button","when news read is loading buttonNum is");
         Log.d("button",String.valueOf(buttonPressed));
@@ -166,8 +166,8 @@ public class BingAsyncTask extends AsyncTask<Integer, Void, postWrap> {
 
 
                 try {
-                    Log.d("loadmore","loadmore is "+postWrap.loadMore+" when reloading titles");
-                    jobject = data.getJSONObject(i+postWrap.loadMore);
+                    Log.d("loadmore","loadmore is "+BingAsyncPostWrapper.loadMore+" when reloading titles");
+                    jobject = data.getJSONObject(i+BingAsyncPostWrapper.loadMore);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -246,9 +246,9 @@ public class BingAsyncTask extends AsyncTask<Integer, Void, postWrap> {
 
 
                 try {
-                    Log.d("loadmore","loadmore is "+postWrap.loadMore+" when reloading content summary");
+                    Log.d("loadmore","loadmore is "+BingAsyncPostWrapper.loadMore+" when reloading content summary");
 
-                    jobject = data.getJSONObject(c+postWrap.loadMore);
+                    jobject = data.getJSONObject(c+BingAsyncPostWrapper.loadMore);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -345,13 +345,13 @@ public class BingAsyncTask extends AsyncTask<Integer, Void, postWrap> {
 
         //update news read body
         if(buttonPressed>-1){
-            Log.d("loadmore","loadmore is "+postWrap.loadMore+" when reloading urls");
+            Log.d("loadmore","loadmore is "+BingAsyncPostWrapper.loadMore+" when reloading urls");
             switch (buttonPressed){
                 case 1:
                     try {
 
 
-                        jobject = data.getJSONObject(0+postWrap.loadMore);
+                        jobject = data.getJSONObject(0+BingAsyncPostWrapper.loadMore);
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
@@ -364,7 +364,7 @@ public class BingAsyncTask extends AsyncTask<Integer, Void, postWrap> {
                     break;
                 case 2:
                     try {
-                        jobject = data.getJSONObject(1+postWrap.loadMore);
+                        jobject = data.getJSONObject(1+BingAsyncPostWrapper.loadMore);
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
@@ -378,7 +378,7 @@ public class BingAsyncTask extends AsyncTask<Integer, Void, postWrap> {
                     break;
                 case 3:
                     try {
-                        jobject = data.getJSONObject(2+postWrap.loadMore);
+                        jobject = data.getJSONObject(2+BingAsyncPostWrapper.loadMore);
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
@@ -392,7 +392,7 @@ public class BingAsyncTask extends AsyncTask<Integer, Void, postWrap> {
                     break;
                 case 4:
                     try {
-                        jobject = data.getJSONObject(3+postWrap.loadMore);
+                        jobject = data.getJSONObject(3+BingAsyncPostWrapper.loadMore);
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
@@ -406,7 +406,7 @@ public class BingAsyncTask extends AsyncTask<Integer, Void, postWrap> {
                     break;
                 case 5:
                     try {
-                        jobject = data.getJSONObject(4+postWrap.loadMore);
+                        jobject = data.getJSONObject(4+BingAsyncPostWrapper.loadMore);
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
@@ -419,7 +419,7 @@ public class BingAsyncTask extends AsyncTask<Integer, Void, postWrap> {
                     break;
                 case 6:
                     try {
-                        jobject = data.getJSONObject(5+postWrap.loadMore);
+                        jobject = data.getJSONObject(5+BingAsyncPostWrapper.loadMore);
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
@@ -433,7 +433,7 @@ public class BingAsyncTask extends AsyncTask<Integer, Void, postWrap> {
                     break;
                 case 7:
                     try {
-                        jobject = data.getJSONObject(6+postWrap.loadMore);
+                        jobject = data.getJSONObject(6+BingAsyncPostWrapper.loadMore);
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
@@ -447,7 +447,7 @@ public class BingAsyncTask extends AsyncTask<Integer, Void, postWrap> {
                     break;
                 case 8:
                     try {
-                        jobject = data.getJSONObject(7+postWrap.loadMore);
+                        jobject = data.getJSONObject(7+BingAsyncPostWrapper.loadMore);
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
@@ -461,7 +461,7 @@ public class BingAsyncTask extends AsyncTask<Integer, Void, postWrap> {
                     break;
                 case 9:
                     try {
-                        jobject = data.getJSONObject(8+postWrap.loadMore);
+                        jobject = data.getJSONObject(8+BingAsyncPostWrapper.loadMore);
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
@@ -475,7 +475,7 @@ public class BingAsyncTask extends AsyncTask<Integer, Void, postWrap> {
                     break;
                 case 10:
                     try {
-                        jobject = data.getJSONObject(9+postWrap.loadMore);
+                        jobject = data.getJSONObject(9+BingAsyncPostWrapper.loadMore);
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }

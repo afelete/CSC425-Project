@@ -40,10 +40,6 @@
             android:value="@integer/google_play_services_version" />
 
         <activity
-            android:name=".NewsWeb"
-            android:label="@string/title_activity_news_web"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".NewsRead"
             android:label="@string/title_activity_news_read"
             android:theme="@style/AppTheme.NoActionBar"></activity>

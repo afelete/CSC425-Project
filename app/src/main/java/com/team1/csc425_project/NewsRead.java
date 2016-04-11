@@ -67,7 +67,7 @@ public class NewsRead extends AppCompatActivity implements View.OnClickListener 
         public void onClick(View v) {
             String url=null;
             if (v.getId() == R.id.fab_news_read) {
-                postWrap pw = new postWrap();
+                BingAsyncPostWrapper pw = new BingAsyncPostWrapper();
                 JSONArray getUrl = pw.jasonarray;
                 try {
                     JSONObject getUrl2 = getUrl.getJSONObject(buttonPressed-1);
