@@ -19,9 +19,10 @@ public class News extends AppCompatActivity implements View.OnClickListener{
 
 
     //private int loadMore=0;//how many new stories to load when 'loadmore' button is pressed
-     private GoogleApiClient client;
+    private GoogleApiClient client;
     private CardView c;
     private View v;
+    Integer noButtonPress=-1;//holds which news card has been clicked, -1 if no news card has been clicked.
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,36 +65,20 @@ public class News extends AppCompatActivity implements View.OnClickListener{
         Button loadMoreButton = (Button) findViewById(R.id.loadMore);
         loadMoreButton.setOnClickListener(this);
 
-        //setup crap while network thread is doing work
-        TextView title1 = new TextView(getApplicationContext());
-        title1=(TextView)findViewById(R.id.title1);
-
-        URL url1 = null;
-        try {
-            url1 = new URL("http://painfullreset.us/fetch.php");
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
-        Integer noButtonPress=-1;
-
         BingAsyncTask update =new BingAsyncTask(this);
 
-        update.execute(noButtonPress,0);
+        update.execute(noButtonPress,0);//access api in background thread
 
 
 
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-       // MenuInflater inflater = getMenuInflater();
-        //inflater.inflate(R.menu.news_menu, menu);
-        return true;
-    }
+
     public void onClick(View v) {
 
         if (v.getId() == R.id.loadMore) {
-            BingAsyncPostWrapper.loadMore=BingAsyncPostWrapper.loadMore+10;
+            BingAsyncPostWrapper.loadMore=BingAsyncPostWrapper.loadMore+10;//load more containts the number of search results to skip, as they have already been used.
             Log.d("loadMore","loadMore is "+BingAsyncPostWrapper.loadMore);
             BingAsyncTask update =new BingAsyncTask(this);
 
@@ -109,7 +94,8 @@ public class News extends AppCompatActivity implements View.OnClickListener{
             
             TextView title1 = new TextView(this);   
             title1=(TextView)findViewById(R.id.title1);
-            title1.setTextColor(unreadTitleColor);            
+            title1.setTextColor(unreadTitleColor);
+
 
             
             TextView summary2 = new TextView(this);
@@ -119,6 +105,7 @@ public class News extends AppCompatActivity implements View.OnClickListener{
             TextView title2 = new TextView(this);
             title2=(TextView)findViewById(R.id.title2);
             title2.setTextColor(unreadTitleColor);
+
             
 
             TextView summary3 = new TextView(this);
@@ -199,7 +186,10 @@ public class News extends AppCompatActivity implements View.OnClickListener{
             title10=(TextView)findViewById(R.id.title10);
             title10.setTextColor(unreadTitleColor);
 
+
+
             //reset scroll view to top of activity
+            //after new articles load in.
             ScrollView scroll = new ScrollView(this);
             scroll=(ScrollView)findViewById(R.id.scrollNews);
             scroll.scrollTo(0,0);

@@ -8,6 +8,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.content.Intent;
@@ -24,33 +25,32 @@ public class Volunteer extends AppCompatActivity {
     private EditText zipEditText; //where user zip code is stored
     private String telephone;
     private final int MY_PERMISSIONS_REQUEST_READ_SMS = 1;
+    private boolean havePermission=false;
 
     @Override
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
         switch (requestCode) {
             case MY_PERMISSIONS_REQUEST_READ_SMS: {
-                // If request is cancelled, the result arrays are empty.
-                if (grantResults.length > 0
-                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-
-                    // permission was granted, yay! Do the
-                    TelephonyManager phoneInfo = (TelephonyManager)getSystemService(Context.TELEPHONY_SERVICE);
-                    telephone = phoneInfo.getLine1Number();
-                } else {
-
-                    // permission denied
-                    // the app prolly crashes idk
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    havePermission=true;
+                    return;
+                }else{
+                    havePermission=false;
                 }
-                return;
-            }
+                }
+
 
             // other 'case' lines to check for other
             // permissions this app might request
         }
+
+
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_volunteer);
 
@@ -71,6 +71,17 @@ public class Volunteer extends AppCompatActivity {
 
         //Get Devices phone number
 
+        Log.d("tele","do we have permission "+havePermission);
+        if (havePermission){
+            Log.d("tele","is this even executing?");
+
+
+            // permission was granted, yay! Do the
+            TelephonyManager phoneInfo = (TelephonyManager)getSystemService(Context.TELEPHONY_SERVICE);
+            telephone = phoneInfo.getLine1Number();
+            //is telephone actually set?
+            Log.d("tele", "telephone first set = " + telephone);
+        }
         //moved into onRequestPermissionResult
         //TelephonyManager phoneInfo = (TelephonyManager)getSystemService(Context.TELEPHONY_SERVICE);
         //telephone = phoneInfo.getLine1Number();
@@ -94,6 +105,9 @@ public class Volunteer extends AppCompatActivity {
 
             //on click, we want to start up an email app and add the contents
             //of the form to it
+
+            //is telephone actually set?
+            Log.d("tele","telephone = "+telephone);
             String form = name + System.lineSeparator() + dob + System.lineSeparator() +
                     address + System.lineSeparator() + zip + System.lineSeparator() + telephone;
 

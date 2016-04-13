@@ -51,7 +51,6 @@ public class BingAsyncTask extends AsyncTask<Integer, Void, BingAsyncPostWrapper
     @Override
     protected BingAsyncPostWrapper doInBackground(Integer... buttonNum) {
         String result = "";
-        //For some reason post method doesn't work.
         //Only Get request work for this API.
         //Prepare Post request.
 
@@ -112,7 +111,6 @@ public class BingAsyncTask extends AsyncTask<Integer, Void, BingAsyncPostWrapper
             JSONObject bingResult =new JSONObject(result);
             //Log.d("json","jObject.results.Title is"+jObject.getJSONArray());
             JSONObject jObject = bingResult.getJSONObject("d");
-            //String next50 = jObject.getString("__next")+"$format=json";//instead of using the microsoft next 50 results, which breaks formting, increment after every search
             nextUrl =APILink+"$skip="+skip;
 
             Log.d("next50","next 50 url is "+nextUrl);

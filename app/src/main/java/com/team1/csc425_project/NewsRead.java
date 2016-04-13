@@ -20,9 +20,6 @@ public class NewsRead extends AppCompatActivity implements View.OnClickListener 
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_news_read);
         setContentView(R.layout.activity_news_web);
-        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-
-
 
         Integer loadMore=0;
         Integer buttonNum=0;
@@ -67,16 +64,18 @@ public class NewsRead extends AppCompatActivity implements View.OnClickListener 
         public void onClick(View v) {
             String url=null;
             if (v.getId() == R.id.fab_news_read) {
+
+                //create instance of BingAsyncPostWrapper, used to pass information into BingAsyncTask objects
                 BingAsyncPostWrapper pw = new BingAsyncPostWrapper();
-                JSONArray getUrl = pw.jasonarray;
+                JSONArray getUrl = pw.jasonarray;//grab data returned from bing api
                 try {
                     JSONObject getUrl2 = getUrl.getJSONObject(buttonPressed-1);
-                    url=getUrl2.getString("Url");
+                    url=getUrl2.getString("Url");//extract url string from bing api data
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
 
-
+                //configure share button
                 Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
                 sharingIntent.setType("text/plain");
                 String shareBody = url;
